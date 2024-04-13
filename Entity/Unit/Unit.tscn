@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cck3xiidx2vye"]
+[gd_scene load_steps=6 format=3 uid="uid://dp282v0vopkeu"]
 
-[ext_resource type="Script" path="res://Entity/Unit/Character.gd" id="1_rvie2"]
 [ext_resource type="Texture2D" uid="uid://cric6kp21ux0n" path="res://icon.svg" id="2_bkth5"]
-[ext_resource type="Script" path="res://Entity/Unit/Enemy.gd" id="3_a3fgp"]
+[ext_resource type="Script" path="res://Entity/Unit/Unit.gd" id="3_a3fgp"]
+[ext_resource type="PackedScene" uid="uid://bqugt8ejy5671" path="res://Entity/Traits/Aggro.tscn" id="3_voqnu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j5eei"]
 animations = [{
@@ -18,53 +18,23 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jtjgt"]
 size = Vector2(131, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6v8s"]
-size = Vector2(129, 130)
-
-[node name="Unit" type="Node2D"]
-
-[node name="Character" type="CharacterBody2D" parent="."]
-position = Vector2(205, 269)
-script = ExtResource("1_rvie2")
-metadata/_edit_group_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character"]
-sprite_frames = SubResource("SpriteFrames_j5eei")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
-position = Vector2(-1.5, -1)
-shape = SubResource("RectangleShape2D_jtjgt")
-
-[node name="RayCast2D" type="RayCast2D" parent="Character"]
-target_position = Vector2(0, 120)
-
-[node name="Hurtbox" type="Area2D" parent="Character"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Hurtbox"]
-position = Vector2(-1.5, -1)
-shape = SubResource("RectangleShape2D_i6v8s")
-
-[node name="Enemy" type="CharacterBody2D" parent="."]
-position = Vector2(994, 272)
+[node name="Unit" type="CharacterBody2D"]
+position = Vector2(54, -11)
 script = ExtResource("3_a3fgp")
-metadata/_edit_group_ = true
+speed = null
+base_dir = null
+dir = null
+max_hp = null
+hp = null
+power = null
+is_player = null
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(205, 269)
 sprite_frames = SubResource("SpriteFrames_j5eei")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
-position = Vector2(-1.5, -1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(203.5, 268)
 shape = SubResource("RectangleShape2D_jtjgt")
 
-[node name="RayCast2D" type="RayCast2D" parent="Enemy"]
-target_position = Vector2(0, 120)
-
-[node name="Hurtbox" type="Area2D" parent="Enemy"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Hurtbox"]
-position = Vector2(-1.5, -1)
-shape = SubResource("RectangleShape2D_i6v8s")
-
-[connection signal="sign_attack" from="Character" to="Enemy" method="_on_character_sign_attack"]
-[connection signal="body_entered" from="Character/Hurtbox" to="Character" method="_on_hurtbox_body_entered"]
-[connection signal="body_entered" from="Enemy/Hurtbox" to="Enemy" method="_on_hurtbox_body_entered"]
+[node name="Aggro" parent="." instance=ExtResource("3_voqnu")]

@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://wci7l3sulnmw"]
+[gd_scene load_steps=3 format=3 uid="uid://dx7fd761jhhkb"]
 
-[node name="Structure" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://cpo03khhf3u3x" path="res://Entity/Entity.tscn" id="1_8uwr5"]
+[ext_resource type="Script" path="res://Entity/Structure/Structure.gd" id="2_jge8q"]
+
+[node name="Entity" instance=ExtResource("1_8uwr5")]
+script = ExtResource("2_jge8q")
