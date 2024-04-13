@@ -1,24 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3s01sr4o4bi4"]
+[gd_scene load_steps=4 format=3 uid="uid://c6lsalty3f38y"]
 
-[ext_resource type="Texture2D" uid="uid://gt54kfmnum1h" path="res://background/GameOver.jpg" id="1_dmo4o"]
-[ext_resource type="Script" path="res://Game_Over/Game_over.gd" id="1_upgvf"]
-[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="2_fta6p"]
+[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="1_07ju8"]
+[ext_resource type="Script" path="res://Victory/victory.gd" id="1_apgbl"]
+[ext_resource type="Texture2D" uid="uid://dv6i1xrwmtatq" path="res://background/victory.jpg" id="1_xjhcg"]
 
-[node name="GameOver" type="Control"]
+[node name="Victory" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_upgvf")
+script = ExtResource("1_apgbl")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(1, 1.06704)
-texture = ExtResource("1_dmo4o")
+texture = ExtResource("1_xjhcg")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -37,26 +36,38 @@ layout_mode = 2
 theme_override_constants/separation = 60
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Victory" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.243137, 0, 0.0784314, 1)
+theme_override_colors/font_color = Color(1, 0.65098, 0.152941, 1)
+theme_override_colors/font_shadow_color = Color(0.419608, 0.278431, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("2_fta6p")
+theme_override_fonts/font = ExtResource("1_07ju8")
 theme_override_font_sizes/font_size = 64
-text = "Game Over"
+text = "Victory"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Separator8" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Separator9" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Separator10" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Separator10" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Separator11" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator12" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator13" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator14" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator15" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
@@ -76,9 +87,6 @@ theme_override_constants/separation = 64
 [node name="Separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Separator9" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="Separator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
@@ -91,12 +99,15 @@ layout_mode = 2
 [node name="Separator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="Separator8" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="Separator7" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="retry_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="victory_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_fta6p")
+theme_override_fonts/font = ExtResource("1_07ju8")
 theme_override_font_sizes/font_size = 32
-text = "Retry Again"
+text = "New Game"
