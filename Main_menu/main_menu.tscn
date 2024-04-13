@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://blxv2nh2d61c4"]
 
 [ext_resource type="Script" path="res://Main_menu/main_menu.gd" id="1_kklfb"]
-[ext_resource type="Texture2D" uid="uid://cb1f26bb5mbcr" path="res://background/prova.jpg" id="1_td2dd"]
+[ext_resource type="Texture2D" uid="uid://k3a4kh368mlc" path="res://background/menubackgroundsfocato.jpg" id="2_nu62c"]
 [ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="3_nqi78"]
 [ext_resource type="PackedScene" uid="uid://p8schwksc6gl" path="res://Main_menu/Options_menu/options.tscn" id="3_ouuwk"]
 [ext_resource type="AudioStream" uid="uid://bbk7dm4wgxcd6" path="res://music/prova.mp3" id="4_6c2ri"]
@@ -13,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1.01034)
 script = ExtResource("1_kklfb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -22,7 +23,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_td2dd")
+scale = Vector2(0.99997, 1.01194)
+texture = ExtResource("2_nu62c")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
