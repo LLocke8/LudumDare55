@@ -2,7 +2,7 @@ extends MarginContainer
 
 
 @onready var DatabaseCarte = load("res://Carte/DatabaseCarte.gd")
-var NomeCarta = 'ScheletroSpada'
+var NomeCarta = 'ScheletroScudo'
 @onready var InfoCarta = DatabaseCarte.DATA[DatabaseCarte.get(NomeCarta)]
 @onready var ImgCarta = str("res://Carte/Grafiche/",InfoCarta[0],"/",NomeCarta,".png")
 
