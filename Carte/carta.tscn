@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqhera20j2q51"]
+
+[ext_resource type="Script" path="res://Carte/carta.gd" id="1_umsgb"]
+[ext_resource type="Texture2D" uid="uid://21tsr2c6djvl" path="res://Carte/Grafiche/Bordo.png" id="2_sbimr"]
+
+[node name="Carta" type="MarginContainer"]
+offset_right = 48.0
+offset_bottom = 82.0
+pivot_offset = Vector2(24, 41)
+script = ExtResource("1_umsgb")
+
+[node name="Sfondo" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="Bordo" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_sbimr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 8
+text = " Scheletro"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "3"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "3"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "3"
