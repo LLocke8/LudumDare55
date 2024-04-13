@@ -1,9 +1,10 @@
-extends Node
+extends Node2D
 
 #riferimento all'enemy spawner
 #var ES : EnemySpawner = ref
 #riferimento al mazzo 
 #var Mazzo : Mazzo = ref
+
 
 var MaxHPgiocatore : int = 10 :
 	set(Mhp): set_MaxHPgiocatore(Mhp)
@@ -90,3 +91,14 @@ func set_HPnemico(nhpnem):
 	HPnemico = nhpnem
 	#modifica UI
 
+
+func damagearea_entered(body):
+	#contralla se e un entita
+	#if body is Entity:
+	#controlla a chi appartiene
+	#	if body.belongs == 1: 
+	#		HPgiocatore -= 1 #cambia il valore in base agli HP o a qualcos'altro 
+	#	else:
+	#		HPnemico -= 1
+	#	body.queue_free()
+	pass

@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyvayuwxc7ij0"]
+[gd_scene load_steps=3 format=3 uid="uid://bib0rhkp2hkud"]
 
 [ext_resource type="Script" path="res://Sistemi/GameManager.gd" id="1_agr3k"]
 
-[node name="GameManager" type="Node"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqe2w"]
+size = Vector2(1280, 40)
+
+[node name="GameManager" type="Node2D"]
 script = ExtResource("1_agr3k")
+
+[node name="DamageareaP" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageareaP"]
+shape = SubResource("RectangleShape2D_fqe2w")
+
+[node name="DamageareaEn" type="Area2D" parent="."]
+position = Vector2(-3, 671)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageareaEn"]
+shape = SubResource("RectangleShape2D_fqe2w")
+
+[connection signal="body_entered" from="DamageareaP" to="." method="damagearea_entered"]
+[connection signal="body_entered" from="DamageareaEn" to="." method="damagearea_entered"]
