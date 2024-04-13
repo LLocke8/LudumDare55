@@ -88,7 +88,3 @@ layout_mode = 2
 [node name="Turn Counter" type="Label" parent="MarginContainer2/VBoxContainer"]
 layout_mode = 2
 text = "Turn 1"
-
-[node name="Timer" type="Label" parent="MarginContainer2/VBoxContainer"]
-layout_mode = 2
-text = "00:00"
