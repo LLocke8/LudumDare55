@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d25k2s2svxeab"]
+
+[ext_resource type="Script" path="res://Sistemi/GameManager.gd" id="1_agr3k"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_agr3k")
+
+[node name="PhaseTimer" type="Timer" parent="."]
+wait_time = 60.0
+
+[connection signal="timeout" from="PhaseTimer" to="." method="_on_phase_timer_timeout"]
