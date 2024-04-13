@@ -24,7 +24,6 @@ func prossimo_turno():
 	turno = !turno
 
 func prossima_fase(nfase):
-	$PhaseTimer.stop()
 	if !fase:
 		prossimo_turno()
 	if fase:
@@ -32,7 +31,6 @@ func prossima_fase(nfase):
 		#get_tree().call_group("Entita","Start")
 		#impedisci al giocatore di giocare carte
 		#Mazzo.lock()
-		$PhaseTimer.start()
 		pass
 	else:
 		#rimuovi le unita non persistenti che rimangono
@@ -40,6 +38,3 @@ func prossima_fase(nfase):
 		#
 		pass
 	fase = nfase 
-
-func _on_phase_timer_timeout():
-	prossima_fase(!fase)
