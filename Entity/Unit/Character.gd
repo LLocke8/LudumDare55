@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-signal attack
+signal sign_attack
 var speed = 100
-var wait = 1
+var wait = 2.0
 var hp = 100
 var power = 20
 var canMove = true
@@ -33,20 +33,17 @@ func get_direction():
 	if direction.y < 0:
 		return "up"    
 
-func Attack():
-	if canAttack:
-		emit_signal("attack", power) # Qui passiamo il nome del segnale e il valore di 'power' come argomento
-		canAttack = false
-		$Timer.start(wait)
-		print($Timer.time_left)
 
-func _on_Timer_timeout():
-	canAttack = true
-	$Timer.wait_time(1)
+func attack(body):
+	var healt = body.hp
+	while(healt >=0):
+		await get_tree().create_timer(wait).timeout
+		emit_signal("sign_attack",power)
+
+	
 
 func _on_hurtbox_body_entered(body):
 	if body.name in "Enemy" :
 		canMove = false
-		$Timer.wait_time(2)
-		Attack()
-		
+		attack(body)
+	

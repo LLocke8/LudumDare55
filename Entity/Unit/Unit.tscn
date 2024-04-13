@@ -44,8 +44,6 @@ target_position = Vector2(0, 120)
 position = Vector2(-1.5, -1)
 shape = SubResource("RectangleShape2D_i6v8s")
 
-[node name="Timer" type="Timer" parent="Character"]
-
 [node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(994, 272)
 script = ExtResource("3_a3fgp")
@@ -67,6 +65,6 @@ target_position = Vector2(0, 120)
 position = Vector2(-1.5, -1)
 shape = SubResource("RectangleShape2D_i6v8s")
 
-[connection signal="attack" from="Character" to="Enemy" method="_on_character_attack"]
+[connection signal="sign_attack" from="Character" to="Enemy" method="_on_character_sign_attack"]
 [connection signal="body_entered" from="Character/Hurtbox" to="Character" method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="Enemy/Hurtbox" to="Enemy" method="_on_hurtbox_body_entered"]

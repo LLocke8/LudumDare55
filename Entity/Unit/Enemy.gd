@@ -36,11 +36,8 @@ func _on_hurtbox_body_entered(body):
 		canMove = false
 
 
-
-
-func _on_character_attack(power : int):
+func _on_character_sign_attack(power : float):
 	hp-=power
-	print(power)
+	print(power, hp)
 	if(hp<=0):
 		queue_free()
-	
