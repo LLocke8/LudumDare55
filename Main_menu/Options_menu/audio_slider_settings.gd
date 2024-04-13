@@ -20,7 +20,6 @@ func _ready():
 func set_name_label_test() -> void:
 	audio_name_master.text = str(bus_name) + " Volume"
 
-
 func set_audio_num_label_test() -> void:
 	audio_num_master.text = str(h_slider.value * 100) + "%"
 	

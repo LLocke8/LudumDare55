@@ -1,15 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://blxv2nh2d61c4"]
+[gd_scene load_steps=6 format=3 uid="uid://blxv2nh2d61c4"]
 
 [ext_resource type="Script" path="res://Main_menu/main_menu.gd" id="1_kklfb"]
 [ext_resource type="Texture2D" uid="uid://cb1f26bb5mbcr" path="res://background/prova.jpg" id="1_td2dd"]
+[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="3_nqi78"]
 [ext_resource type="PackedScene" uid="uid://p8schwksc6gl" path="res://Main_menu/Options_menu/options.tscn" id="3_ouuwk"]
 [ext_resource type="AudioStream" uid="uid://bbk7dm4wgxcd6" path="res://music/prova.mp3" id="4_6c2ri"]
-
-[sub_resource type="SystemFont" id="SystemFont_k7i2q"]
-font_names = PackedStringArray("Impact")
-
-[sub_resource type="SystemFont" id="SystemFont_6bnve"]
-font_names = PackedStringArray("Impact")
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -50,13 +45,14 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.52549, 0.00784314, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = SubResource("SystemFont_k7i2q")
+theme_override_fonts/font = ExtResource("3_nqi78")
 theme_override_font_sizes/font_size = 64
-text = "Gioco Epico"
+text = "Card Game"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -75,22 +71,22 @@ layout_mode = 2
 [node name="Start_game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_6bnve")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("3_nqi78")
+theme_override_font_sizes/font_size = 28
 text = "Start Game"
 
 [node name="Options" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_6bnve")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("3_nqi78")
+theme_override_font_sizes/font_size = 28
 text = "Options"
 
 [node name="Exit_game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_6bnve")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("3_nqi78")
+theme_override_font_sizes/font_size = 28
 text = "Exit Game"
 
 [node name="Options_menu" parent="." instance=ExtResource("3_ouuwk")]

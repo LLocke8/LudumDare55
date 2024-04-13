@@ -1,10 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://p8schwksc6gl"]
 
 [ext_resource type="Script" path="res://Main_menu/Options_menu/options.gd" id="1_sh8c8"]
+[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="2_5u6ix"]
 [ext_resource type="PackedScene" uid="uid://b2f36b427o4ml" path="res://Main_menu/Options_menu/settings_tab_container.tscn" id="2_vpx5y"]
-
-[sub_resource type="SystemFont" id="SystemFont_pjcev"]
-font_names = PackedStringArray("Impact")
 
 [sub_resource type="SystemFont" id="SystemFont_hwijd"]
 font_names = PackedStringArray("Impact")
@@ -40,8 +38,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = SubResource("SystemFont_pjcev")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_5u6ix")
+theme_override_font_sizes/font_size = 50
 text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
