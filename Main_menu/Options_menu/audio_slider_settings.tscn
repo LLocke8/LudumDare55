@@ -10,6 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tl2uy")
+bus_name = "Sfx"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
