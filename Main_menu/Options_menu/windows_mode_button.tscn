@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://45pqjs36jlj6"]
+
+[ext_resource type="PackedScene" uid="uid://cwt6u4a15vqum" path="res://Main_menu/Options_menu/display.tscn" id="1_pydm7"]
+[ext_resource type="Script" path="res://Main_menu/Options_menu/windows_mode_button.gd" id="2_4kp4w"]
+
+[node name="Windows_Mode_Button" instance=ExtResource("1_pydm7")]
+script = ExtResource("2_4kp4w")
+
+[node name="HBoxContainer" parent="." index="0"]
+offset_right = 428.0
+
+[node name="Label" parent="HBoxContainer" index="0"]
+text = "Window Mode"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" parent="HBoxContainer" index="1"]
+theme_override_constants/separation = 0
+
+[node name="OptionButton" parent="HBoxContainer/VSeparator" index="0"]
+custom_minimum_size = Vector2(250, 40)
+offset_left = 6.0
+offset_right = 302.0
+offset_bottom = 40.0

@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2f36b427o4ml"]
+
+[ext_resource type="PackedScene" uid="uid://45pqjs36jlj6" path="res://Main_menu/Options_menu/windows_mode_button.tscn" id="1_pqb1l"]
+[ext_resource type="PackedScene" uid="uid://c412w6vf87bc1" path="res://Main_menu/Options_menu/audio_slider_settings.tscn" id="1_y6s21"]
+
+[node name="Settings_tab_container" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Sound" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sound"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Label" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Prova"
+
+[node name="Label2" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Prova"
+
+[node name="Label3" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Prova"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Sound/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Audio_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_y6s21")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="Audio_Slider_Settings2" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_y6s21")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="Audio_Slider_Settings3" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_y6s21")]
+layout_mode = 2
+
+[node name="Grapichs" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Grapichs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Grapichs/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Label" type="Label" parent="TabContainer/Grapichs/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Prova"
+
+[node name="Label2" type="Label" parent="TabContainer/Grapichs/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Prova"
+
+[node name="Label3" type="Label" parent="TabContainer/Grapichs/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Prova"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Grapichs/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Grapichs/MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Windows_Mode_Button" parent="TabContainer/Grapichs/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_pqb1l")]
+layout_mode = 2
