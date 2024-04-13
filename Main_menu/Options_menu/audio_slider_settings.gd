@@ -27,10 +27,9 @@ func set_audio_num_label_test() -> void:
 
 func get_bus_name_by_index() -> void:
 	bus_index = AudioServer.get_bus_index(bus_name)
-	print("Bus index for", bus_name, "is", bus_index)
+
 func set_slider_value() -> void:
 	h_slider.value = db_to_linear(AudioServer.get_bus_volume_db(bus_index))
-	print("Setting slider value to", h_slider.value)
 	
 	set_audio_num_label_test()
 	
