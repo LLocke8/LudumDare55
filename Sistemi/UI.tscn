@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0pm00g27fkh2"]
+
+[ext_resource type="Texture2D" uid="uid://cric6kp21ux0n" path="res://icon.svg" id="1_f84pw"]
+
+[node name="Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Cards" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Cards"]
+layout_mode = 2
+texture = ExtResource("1_f84pw")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/Cards"]
+layout_mode = 2
+texture = ExtResource("1_f84pw")
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/HBoxContainer/Cards"]
+layout_mode = 2
+texture = ExtResource("1_f84pw")
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/HBoxContainer/Cards"]
+layout_mode = 2
+texture = ExtResource("1_f84pw")
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/HBoxContainer/Cards"]
+layout_mode = 2
+texture = ExtResource("1_f84pw")
+
+[node name="Mana" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Mana:
+0/5"
+
+[node name="HP" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "HP
+0/5"
+
+[node name="Start" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_right = 25.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Turn Counter" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Turn 1"
+
+[node name="Timer" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "00:00"
