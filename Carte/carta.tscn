@@ -1,63 +1,84 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqhera20j2q51"]
+[gd_scene load_steps=4 format=3 uid="uid://bqhera20j2q51"]
 
 [ext_resource type="Script" path="res://Carte/carta.gd" id="1_umsgb"]
 [ext_resource type="Texture2D" uid="uid://21tsr2c6djvl" path="res://Carte/Grafiche/Bordo.png" id="2_sbimr"]
+[ext_resource type="FontFile" uid="uid://dg2dk23norgen" path="res://font/Comfortaa-Bold.ttf" id="3_6nisj"]
 
 [node name="Carta" type="MarginContainer"]
 offset_right = 48.0
-offset_bottom = 82.0
-pivot_offset = Vector2(24, 41)
+offset_bottom = 84.0
+pivot_offset = Vector2(24, 42)
 script = ExtResource("1_umsgb")
 
 [node name="Sfondo" type="TextureRect" parent="."]
 layout_mode = 2
+stretch_mode = 2
 
 [node name="Bordo" type="TextureRect" parent="."]
 layout_mode = 2
 texture = ExtResource("2_sbimr")
+stretch_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 2
-theme_override_constants/margin_right = 2
-theme_override_constants/margin_bottom = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="barre" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="topgap" type="MarginContainer" parent="barre"]
 layout_mode = 2
+
+[node name="TopBarra" type="HBoxContainer" parent="barre"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 8
-text = " Scheletro"
-horizontal_alignment = 1
-vertical_alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="barre/TopBarra"]
+custom_minimum_size = Vector2(4, 6)
+layout_mode = 2
+
+[node name="Nome" type="MarginContainer" parent="barre/TopBarra"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="barre/TopBarra/Nome"]
+layout_mode = 2
+
+[node name="nome" type="Label" parent="barre/TopBarra/Nome/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "scheletro"
+
+[node name="Gapdellacorsiacentrale" type="MarginContainer" parent="barre"]
 layout_mode = 2
 size_flags_vertical = 3
-alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="TopBarra2" type="HBoxContainer" parent="barre"]
+custom_minimum_size = Vector2(48, 1)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="barre/TopBarra2"]
+custom_minimum_size = Vector2(4, 6)
 layout_mode = 2
-alignment = 2
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="MarginContainer3" type="MarginContainer" parent="barre/TopBarra2"]
+layout_direction = 3
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
-text = "3"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="barre/TopBarra2/MarginContainer3"]
+custom_minimum_size = Vector2(20, 24)
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
-text = "3"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Mana" type="Label" parent="barre/TopBarra2/MarginContainer3/CenterContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
-text = "3"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = ExtResource("3_6nisj")
+theme_override_font_sizes/font_size = 7
+text = "2"
+
+[node name="MarginContainer2" type="MarginContainer" parent="barre/TopBarra2"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
