@@ -29,7 +29,7 @@ size = Vector2(175, 40)
 script = ExtResource("2_swggk")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
-speed = 35
+speed = 36
 max_hp = 3
 hp = 3
 
