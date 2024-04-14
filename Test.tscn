@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwra2p7xauv73"]
+
+[ext_resource type="PackedScene" uid="uid://dp282v0vopkeu" path="res://Entity/Unit/Unit.tscn" id="2_xnt64"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Test" parent="." instance=ExtResource("2_xnt64")]
+position = Vector2(113, -67)
+
+[node name="Test2" parent="." instance=ExtResource("2_xnt64")]
+position = Vector2(680, 161)
+is_player = false

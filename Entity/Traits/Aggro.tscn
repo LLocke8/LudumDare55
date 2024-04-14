@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqugt8ejy5671"]
+
+[ext_resource type="Script" path="res://Entity/Traits/Aggro.gd" id="1_mhte1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sjibd"]
+radius = 100.0
+
+[node name="Aggro" type="Area2D"]
+position = Vector2(205, 269)
+script = ExtResource("1_mhte1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -1)
+shape = SubResource("CircleShape2D_sjibd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dp282v0vopkeu"]
+
+[ext_resource type="Texture2D" uid="uid://cric6kp21ux0n" path="res://icon.svg" id="2_bkth5"]
+[ext_resource type="Script" path="res://Entity/Unit/Unit.gd" id="3_a3fgp"]
+[ext_resource type="PackedScene" uid="uid://bqugt8ejy5671" path="res://Entity/Traits/Aggro.tscn" id="3_voqnu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5eei"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bkth5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtjgt"]
+size = Vector2(131, 128)
+
+[node name="Unit" type="CharacterBody2D"]
+position = Vector2(54, -11)
+script = ExtResource("3_a3fgp")
+speed = null
+base_dir = null
+dir = null
+max_hp = null
+hp = null
+power = null
+is_player = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(205, 269)
+sprite_frames = SubResource("SpriteFrames_j5eei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(203.5, 268)
+shape = SubResource("RectangleShape2D_jtjgt")
+
+[node name="Aggro" parent="." instance=ExtResource("3_voqnu")]
+area = 700.0
