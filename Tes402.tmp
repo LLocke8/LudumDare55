@@ -8,12 +8,12 @@
 [node name="Entity" parent="." instance=ExtResource("2_4tyie")]
 position = Vector2(481, 222)
 
-[node name="Entity2" parent="." instance=ExtResource("2_vbdbj")]
-position = Vector2(382, 437)
-
 [node name="Entity3" parent="." instance=ExtResource("2_vbdbj")]
-position = Vector2(377, 612)
+position = Vector2(576, 414)
 
 [node name="Entity4" parent="." instance=ExtResource("2_vbdbj")]
-position = Vector2(957, 388)
+position = Vector2(948, 405)
 is_player = false
+
+[node name="Entity2" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(522, 615)

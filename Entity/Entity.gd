@@ -6,7 +6,7 @@ class_name Entity
 @export var hp : int = 100 : 
 	set(nhp): 
 		hp = nhp
-		print(nhp)
+		#print(nhp)
 		if(hp<=0):
 			queue_free()
 		elif(hp >= 100):

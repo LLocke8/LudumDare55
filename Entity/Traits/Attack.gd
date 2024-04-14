@@ -1,5 +1,7 @@
 extends Aggro
 
+class_name Attack
+
 @export var damage : int = 10
 @export var attack_speed : float = 2 :
 	set(natkspeed):

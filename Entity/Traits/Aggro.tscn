@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" path="res://Entity/Traits/Aggro.gd" id="1_mhte1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sjibd"]
-radius = 100.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_0kqyx"]
 
 [node name="Aggro" type="Area2D"]
 collision_layer = 0
@@ -11,8 +10,8 @@ collision_mask = 12
 script = ExtResource("1_mhte1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, -1)
-shape = SubResource("CircleShape2D_sjibd")
+shape = SubResource("CircleShape2D_0kqyx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="ready" from="CollisionShape2D" to="." method="_on_collision_shape_2d_ready"]
