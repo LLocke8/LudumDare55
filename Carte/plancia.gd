@@ -4,6 +4,14 @@ const carta = preload("res://Carte/carta.tscn")
 const ManodelGiocatore = preload("res://Carte/ManodelGiocatore.gd")
 var CartaSelezionata = []
 @onready var DimensioneDeck = ManodelGiocatore.ListaCarte.size()
+
+#@onready var CentroCarteOvale = get_viewport().size * Vector2(0.5, 1.3)
+#@onready var RaggioOriz = get_viewport().size.x*0.45
+#@onready var RaggioVert = get_viewport().size.x*0.4
+var angolo = deg_to_rad(90)
+#var VettoreAngoloOvale = Vector2()
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -14,13 +22,15 @@ func _ready():
 #  pass
 
 
-func _input(InputEvent):
-	if Input.is_action_just_released("leftclick"):
-		var carta_nuova = carta.instance()
-		CartaSelezionata = randi() % DimensioneDeck
-		carta_nuova.NomeCarta = ManodelGiocatore.ListaCarte[CartaSelezionata]
-		carta_nuova.position = get_global_mouse_position()
-		$Carte.add_child(carta_nuova)
-		ManodelGiocatore.ListaCarte.erase(ManodelGiocatore.ListaCarte[CartaSelezionata])
-		DimensioneDeck -= 1
-		
+func _draw():
+	var carta_nuova = carta.instantiate()
+	CartaSelezionata = randi() % DimensioneDeck
+	carta_nuova.NomeCarta = ManodelGiocatore.ListaCarte[CartaSelezionata]
+	carta_nuova.add_child($posizionecarte)
+	#VettoreAngoloOvale = Vector2 (RaggioOriz * cos(angolo), - RaggioVert * sin(angolo))
+	#carta_nuova.rect_position = CentroCarteOvale + VettoreAngoloOvale - carta_nuova.rect_size/2
+	$Carte.add_child(carta_nuova)
+	ManodelGiocatore.ListaCarte.erase(ManodelGiocatore.ListaCarte[CartaSelezionata])
+	angolo += 0.2
+	DimensioneDeck -= 1
+	return DimensioneDeck

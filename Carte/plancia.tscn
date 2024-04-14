@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgnlhcogqxejw"]
+[gd_scene load_steps=4 format=3 uid="uid://cgnlhcogqxejw"]
 
 [ext_resource type="Script" path="res://Carte/plancia.gd" id="1_d4iav"]
+[ext_resource type="Texture2D" uid="uid://b5rafrygj1kep" path="res://Carte/Grafiche/back.png" id="2_rkwiq"]
+[ext_resource type="Script" path="res://Carte/Mazzo.gd" id="3_co418"]
 
 [node name="plancia" type="Node2D"]
 script = ExtResource("1_d4iav")
@@ -10,3 +12,22 @@ script = ExtResource("1_d4iav")
 [node name="Cosachesostituiscelatilemap" type="Sprite2D" parent="."]
 position = Vector2(628, 340)
 scale = Vector2(27.1667, 9.09524)
+
+[node name="Deck" type="Node2D" parent="."]
+position = Vector2(1230, 636)
+
+[node name="Mazzo" type="TextureButton" parent="Deck"]
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 47.0
+offset_bottom = 81.0
+texture_normal = ExtResource("2_rkwiq")
+texture_pressed = ExtResource("2_rkwiq")
+texture_hover = ExtResource("2_rkwiq")
+script = ExtResource("3_co418")
+
+[node name="posizionecarte" type="HBoxContainer" parent="."]
+offset_left = 1.0
+offset_top = 610.0
+offset_right = 1223.0
+offset_bottom = 719.0

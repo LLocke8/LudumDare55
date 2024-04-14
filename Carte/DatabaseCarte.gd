@@ -1,11 +1,11 @@
-#informazioni unita' = [tipo, attacco, vita, costo, nome, melee o ranged]
+#informazioni unita' = [tipo, attacco, vita, costo, NomeCarta, melee o ranged]
 
 
 enum {ScheletroSpada,  ScheletroArco, ScheletroScudo, Sorcerer, Phantomandfangs}
 
 const DATA = {
 	ScheletroSpada :
-		['mostro', 1, 1, 1, "ScheletroSpada", "melee"],
+		['mostro', 1, 1, 1, 'ScheletroSpada', 'melee'],
 	ScheletroArco :
 		['mostro', 1, 1, 1, 'ScheletroArco', 'ranged'],
 	ScheletroScudo :
