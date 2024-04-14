@@ -13,6 +13,7 @@ class_name Entity
 			pass
 
 @export var is_player : bool = 1 #1 = giocatore, 0 = nemico.
+@export var damage_to_opponent : int = 1
 
 func _ready():
 	if !is_player:
