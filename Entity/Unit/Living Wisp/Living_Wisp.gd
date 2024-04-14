@@ -1,6 +1,6 @@
 extends Unit
 
-class_name Phantom
+class_name Living_Wisp
 
 @export var aggro_node : Node
 @export var attack_node : Node
@@ -12,4 +12,3 @@ func _process(delta):
 		dir = global_position.direction_to(aggro_node.target.global_position)
 	else:
 		dir = base_dir
-

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwra2p7xauv73"]
+[gd_scene load_steps=9 format=3 uid="uid://cwra2p7xauv73"]
 
 [ext_resource type="PackedScene" uid="uid://dwoo0lgqx82qh" path="res://Entity/Structure/Wall/Wall.tscn" id="2_4tyie"]
 [ext_resource type="PackedScene" uid="uid://d2l5eip2jqyqm" path="res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn" id="2_vbdbj"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dxp670ket68sq" path="res://Entity/Unit/Skeleton Archer/Skeleton Archer.tscn" id="3_fe5o3"]
 [ext_resource type="PackedScene" uid="uid://5sfooy35lit0" path="res://Entity/Structure/Coffin/Coffin.tscn" id="4_tftsh"]
 [ext_resource type="PackedScene" uid="uid://tqnh4uro0x17" path="res://Entity/Unit/Phantom/Phantom.tscn" id="7_pu2pi"]
+[ext_resource type="PackedScene" uid="uid://bf5jqf1krwkfj" path="res://Entity/Unit/Living Wisp/Living_Wisp.tscn" id="8_y7iq2"]
 
 [node name="Test" type="Node2D"]
 
@@ -69,7 +70,7 @@ is_player = false
 position = Vector2(436, 475)
 
 [node name="Phantom2" parent="." instance=ExtResource("7_pu2pi")]
-position = Vector2(82, 401)
+position = Vector2(361, 64)
 max_hp = 20
 hp = 3
 
@@ -81,3 +82,10 @@ is_player = false
 
 [node name="Sword_Skeleton3" parent="." instance=ExtResource("2_vbdbj")]
 position = Vector2(76, 53)
+
+[node name="Living Wisp" parent="." instance=ExtResource("8_y7iq2")]
+position = Vector2(39, 318)
+
+[node name="Living Wisp2" parent="." instance=ExtResource("8_y7iq2")]
+position = Vector2(925, 63)
+is_player = false
