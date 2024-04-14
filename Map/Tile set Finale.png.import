@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkkpt8ofwcvf5"
-path="res://.godot/imported/Tile set Finale.png-dbd42f4351aa5fdaa4a887de2d6f5c5d.ctex"
+path="res://.godot/imported/Tile set Finale.png-8c2641b2365680848caa8c2130755b31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile Set + Decorazioni/Tile set Finale.png"
-dest_files=["res://.godot/imported/Tile set Finale.png-dbd42f4351aa5fdaa4a887de2d6f5c5d.ctex"]
+source_file="res://Map/Tile set Finale.png"
+dest_files=["res://.godot/imported/Tile set Finale.png-8c2641b2365680848caa8c2130755b31.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7l10nfev0lyt"]
 
-[ext_resource type="Texture2D" uid="uid://dkkpt8ofwcvf5" path="res://Tile Set + Decorazioni/Tile set Finale.png" id="1_bqjvs"]
-[ext_resource type="Texture2D" uid="uid://du17m1c3xl4e" path="res://Tile Set + Decorazioni/Tile Set Decorazioni.png" id="2_5cash"]
+[ext_resource type="Texture2D" uid="uid://dkkpt8ofwcvf5" path="res://Map/Tile set Finale.png" id="1_2gk7l"]
+[ext_resource type="Texture2D" uid="uid://du17m1c3xl4e" path="res://Map/Tile Set Decorazioni.png" id="2_6465m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_11k4t"]
-texture = ExtResource("1_bqjvs")
+texture = ExtResource("1_2gk7l")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -51,7 +51,7 @@ texture = ExtResource("1_bqjvs")
 5:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v50vk"]
-texture = ExtResource("2_5cash")
+texture = ExtResource("2_6465m")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
