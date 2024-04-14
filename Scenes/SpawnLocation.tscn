@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://bpddkvt6jiiai"]
+[gd_scene load_steps=2 format=3 uid="uid://01h13ko678v4"]
 
-[node name="SpawnLocation" type="Node2D"]
+[ext_resource type="Script" path="res://Scenes/Spawner.gd" id="1_ixlys"]
+
+[node name="Spawner" type="Node2D"]
 position = Vector2(-1, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
+script = ExtResource("1_ixlys")

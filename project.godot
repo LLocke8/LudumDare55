@@ -13,15 +13,25 @@ config_version=5
 config/name="LudumDare55"
 config/description="Entry for the Ludum Dare 55 game contest. "
 config/version="v0.0.1"
-run/main_scene="res://Scenes/World.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://bus_layout/default_bus_layout.tres"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+
+[layer_names]
+
+2d_physics/layer_1="Player Units"
+2d_physics/layer_2="Player Structures"
+2d_physics/layer_3="Enemy Units"
+2d_physics/layer_4="Enemy Structures"
 
 [rendering]
 
