@@ -1,0 +1,130 @@
+[gd_scene load_steps=6 format=3 uid="uid://8ec3stwp4kj6"]
+
+[ext_resource type="Script" path="res://Sistemi/UI.gd" id="1_mui3a"]
+[ext_resource type="Texture2D" uid="uid://dpc8vr66psw8" path="res://Sistemi/Hud.png" id="2_s0qk3"]
+[ext_resource type="Texture2D" uid="uid://m5pqdmx36kn8" path="res://Sistemi/Soul.png" id="3_6nc0u"]
+[ext_resource type="Texture2D" uid="uid://c6ove7sdauj5i" path="res://Sistemi/StartButton.png" id="3_8hfky"]
+[ext_resource type="Texture2D" uid="uid://b72ns088sslg" path="res://Sistemi/Hp.png" id="4_ksp7j"]
+
+[node name="Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+script = ExtResource("1_mui3a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Panello_superiore" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panello_superiore"]
+layout_mode = 2
+
+[node name="Turn Counter" type="Label" parent="VBoxContainer/Panello_superiore/VBoxContainer"]
+layout_mode = 2
+text = "Turn 1"
+
+[node name="Panello_inferiore" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Texture" type="TextureRect" parent="VBoxContainer/Panello_inferiore"]
+layout_mode = 2
+texture = ExtResource("2_s0qk3")
+stretch_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panello_inferiore"]
+layout_mode = 2
+alignment = 2
+
+[node name="Carte" type="HBoxContainer" parent="VBoxContainer/Panello_inferiore/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panello_inferiore/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_6nc0u")
+expand_mode = 2
+
+[node name="Mana" type="Label" parent="VBoxContainer/Panello_inferiore/HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -24.5
+offset_right = 24.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mana:
+0/5"
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/Panello_inferiore/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_ksp7j")
+expand_mode = 2
+
+[node name="HP" type="Label" parent="VBoxContainer/Panello_inferiore/HBoxContainer/TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -24.5
+offset_right = 12.5
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP
+0/5"
+
+[node name="Start" type="TextureButton" parent="VBoxContainer/Panello_inferiore/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_8hfky")
+texture_pressed = ExtResource("3_8hfky")
+texture_hover = ExtResource("3_8hfky")
+texture_disabled = ExtResource("3_8hfky")
+texture_focused = ExtResource("3_8hfky")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Panello_inferiore/HBoxContainer/Start"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
