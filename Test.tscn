@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwra2p7xauv73"]
+[gd_scene load_steps=3 format=3 uid="uid://cwra2p7xauv73"]
 
-[ext_resource type="PackedScene" uid="uid://dp282v0vopkeu" path="res://Entity/Unit/Unit.tscn" id="2_xnt64"]
+[ext_resource type="PackedScene" uid="uid://dwoo0lgqx82qh" path="res://Entity/Structure/Wall/Wall.tscn" id="2_4tyie"]
+[ext_resource type="PackedScene" uid="uid://dbqk4unb757py" path="res://Entity/Unit/Unit.tscn" id="2_xnt64"]
 
 [node name="Test" type="Node2D"]
 
 [node name="Test" parent="." instance=ExtResource("2_xnt64")]
-position = Vector2(113, -67)
+position = Vector2(111, 198)
+collision_mask = 1
 
 [node name="Test2" parent="." instance=ExtResource("2_xnt64")]
-position = Vector2(680, 161)
+position = Vector2(689, 311)
+collision_mask = 1
 is_player = false
+
+[node name="Entity" parent="." instance=ExtResource("2_4tyie")]
+position = Vector2(259, 181)
+collision_mask = 1

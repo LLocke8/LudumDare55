@@ -15,12 +15,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sg4j3"]
+size = Vector2(100, 100)
 
 [node name="Entity" type="CharacterBody2D" groups=["Entity"]]
+collision_mask = 12
 script = ExtResource("1_pru5y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jsn7r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_sg4j3")

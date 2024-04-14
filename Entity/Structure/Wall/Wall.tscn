@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwoo0lgqx82qh"]
+
+[ext_resource type="PackedScene" uid="uid://dx7fd761jhhkb" path="res://Entity/Structure/Structure.tscn" id="1_g1xi8"]
+[ext_resource type="Script" path="res://Entity/Structure/Wall/Wall.gd" id="2_cw3dt"]
+
+[node name="Entity" instance=ExtResource("1_g1xi8")]
+collision_mask = 1
+script = ExtResource("2_cw3dt")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)

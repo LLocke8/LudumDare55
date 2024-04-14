@@ -11,7 +11,14 @@ func _ready():
 		base_dir = Vector2(1,0)
 	else:
 		base_dir = Vector2(-1,0)
+		set_collision_layer_value(1,0)
+		set_collision_layer_value(3,1)
+		set_collision_mask_value(1,1)
+		set_collision_mask_value(2,1)
+		set_collision_mask_value(3,0)
+		set_collision_mask_value(4,0)
 	dir = base_dir
+	
 
 func _physics_process(delta):
 	var movement = move(delta,dir)
