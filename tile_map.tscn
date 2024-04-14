@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7l10nfev0lyt"]
+
+[ext_resource type="Texture2D" uid="uid://dkkpt8ofwcvf5" path="res://Tile Set + Decorazioni/Tile set Finale.png" id="1_bqjvs"]
+[ext_resource type="Texture2D" uid="uid://du17m1c3xl4e" path="res://Tile Set + Decorazioni/Tile Set Decorazioni.png" id="2_5cash"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_11k4t"]
+texture = ExtResource("1_bqjvs")
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+1:1/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+1:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+4:2/0 = 0
+3:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+6:1/0 = 0
+5:1/0 = 0
+4:1/0 = 0
+3:1/0 = 0
+7:1/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+8:1/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+5:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v50vk"]
+texture = ExtResource("2_5cash")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+2:2/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+7:2/0 = 0
+6:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wjysd"]
+sources/0 = SubResource("TileSetAtlasSource_11k4t")
+sources/1 = SubResource("TileSetAtlasSource_v50vk")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_wjysd")
+format = 2
