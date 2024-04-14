@@ -27,7 +27,3 @@ texture_hover = ExtResource("2_rkwiq")
 script = ExtResource("3_co418")
 
 [node name="posizionecarte" type="HBoxContainer" parent="."]
-offset_left = 1.0
-offset_top = 610.0
-offset_right = 1223.0
-offset_bottom = 719.0

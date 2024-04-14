@@ -26,9 +26,9 @@ func _draw():
 	var carta_nuova = carta.instantiate()
 	CartaSelezionata = randi() % DimensioneDeck
 	carta_nuova.NomeCarta = ManodelGiocatore.ListaCarte[CartaSelezionata]
-	carta_nuova.add_child($posizionecarte)
+	carta_nuova.position.add_child($posizionecarte)
 	#VettoreAngoloOvale = Vector2 (RaggioOriz * cos(angolo), - RaggioVert * sin(angolo))
-	#carta_nuova.rect_position = CentroCarteOvale + VettoreAngoloOvale - carta_nuova.rect_size/2
+	#carta_nuova.position = CentroCarteOvale + VettoreAngoloOvale - carta_nuova.rect_size/2
 	$Carte.add_child(carta_nuova)
 	ManodelGiocatore.ListaCarte.erase(ManodelGiocatore.ListaCarte[CartaSelezionata])
 	angolo += 0.2
