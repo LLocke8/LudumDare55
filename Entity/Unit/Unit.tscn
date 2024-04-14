@@ -11,4 +11,3 @@ base_dir = Vector2(0, 0)
 dir = Vector2(0, 0)
 
 [node name="Aggro" parent="." index="2" instance=ExtResource("3_voqnu")]
-area = 700.0

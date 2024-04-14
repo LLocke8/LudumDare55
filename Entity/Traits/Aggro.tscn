@@ -6,6 +6,8 @@
 radius = 100.0
 
 [node name="Aggro" type="Area2D"]
+collision_layer = 0
+collision_mask = 12
 script = ExtResource("1_mhte1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -13,3 +15,4 @@ position = Vector2(-1.5, -1)
 shape = SubResource("CircleShape2D_sjibd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

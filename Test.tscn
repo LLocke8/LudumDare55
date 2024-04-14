@@ -1,19 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwra2p7xauv73"]
 
 [ext_resource type="PackedScene" uid="uid://dwoo0lgqx82qh" path="res://Entity/Structure/Wall/Wall.tscn" id="2_4tyie"]
-[ext_resource type="PackedScene" uid="uid://dbqk4unb757py" path="res://Entity/Unit/Unit.tscn" id="2_xnt64"]
+[ext_resource type="PackedScene" uid="uid://d2l5eip2jqyqm" path="res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn" id="2_vbdbj"]
 
 [node name="Test" type="Node2D"]
 
-[node name="Test" parent="." instance=ExtResource("2_xnt64")]
-position = Vector2(111, 198)
-collision_mask = 1
+[node name="Entity" parent="." instance=ExtResource("2_4tyie")]
+position = Vector2(250, 182)
 
-[node name="Test2" parent="." instance=ExtResource("2_xnt64")]
-position = Vector2(689, 311)
-collision_mask = 1
+[node name="Entity3" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(618, 370)
+
+[node name="Entity4" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(959, 380)
 is_player = false
 
-[node name="Entity" parent="." instance=ExtResource("2_4tyie")]
-position = Vector2(259, 181)
-collision_mask = 1
+[node name="Entity5" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(103, 194)
