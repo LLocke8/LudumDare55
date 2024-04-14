@@ -5,6 +5,7 @@ extends Node2D
 #riferimento al mazzo 
 #var Mazzo : Mazzo = ref
 
+var UI : Node
 
 var MaxHPgiocatore : int = 10 :
 	set(Mhp): set_MaxHPgiocatore(Mhp)
@@ -36,6 +37,9 @@ var fase : bool = 0 : #0 per preparazione, 1 per comabttimento
 	get:
 		return turno
 
+func _ready():
+	UI = get_tree().get_node("Ui")
+
 func prossimo_turno():
 	turno = !turno
 
@@ -51,13 +55,12 @@ func prossima_fase(nfase):
 	else:
 		#rimuovi le unita non persistenti che rimangono
 		#get_tree().call_group("Entita","Kill")
-		#
 		pass
 	fase = nfase 
 
 func set_MaxHPgiocatore(Mhp):
 	MaxHPgiocatore = Mhp 
-	#modifica UI
+	UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
 
 func set_hp(hp):
 	HPgiocatore = hp 
@@ -66,17 +69,17 @@ func set_hp(hp):
 		pass
 	elif HPgiocatore > MaxHPgiocatore:
 		HPgiocatore = MaxHPgiocatore
-	#modifica UI
+	UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
 
 func set_Maxanime(maxa):
 	Maxanime = maxa
-	#modifica UI
+	UI.Mana.text = "Mana \n" + str(Anime) + str(Maxanime)
 
 func set_anime(nanime):
 	Anime = nanime
 	if Anime > Maxanime:
 		Anime = Maxanime
-	#modifica UI
+	UI.Mana.text = "Mana \n" + str(Anime) + str(Maxanime)
 
 func set_MaxHPnemico(nmaxhpn):
 	HPnemico = nmaxhpn 
@@ -89,8 +92,7 @@ func set_MaxHPnemico(nmaxhpn):
 
 func set_HPnemico(nhpnem):
 	HPnemico = nhpnem
-	#modifica UI
-
+	#Aggiorna UI
 
 func damagearea_entered(body):
 	#contralla se e un entita
