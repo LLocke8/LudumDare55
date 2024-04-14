@@ -1,92 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqhera20j2q51"]
+[gd_scene load_steps=4 format=3 uid="uid://bb4qpasqitdxs"]
 
-[ext_resource type="Script" path="res://Carte/carta.gd" id="1_umsgb"]
-[ext_resource type="Texture2D" uid="uid://21tsr2c6djvl" path="res://Carte/Grafiche/Bordo.png" id="2_sbimr"]
-[ext_resource type="FontFile" uid="uid://dg2dk23norgen" path="res://font/Comfortaa-Bold.ttf" id="3_6nisj"]
-[ext_resource type="Texture2D" uid="uid://by1xvftb4h7b7" path="res://Carte/Grafiche/Bordo_oro.png" id="4_n2012"]
+[ext_resource type="Script" path="res://Carte/carta.gd" id="1_oq75u"]
 
-[node name="Carta" type="MarginContainer"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_puoy5"]
+load_path = "res://.godot/imported/ScheletroSpada.png-371ce407505c482c579ee909d87ffae6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5nl65"]
+load_path = "res://.godot/imported/Bordo.png-8097e12ce3899bd10fea925625bc5a8c.ctex"
+
+[node name="Carta" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oq75u")
+
+[node name="Immagine" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 16.0
+offset_right = 43.0
+offset_bottom = 55.0
+texture = SubResource("CompressedTexture2D_puoy5")
+expand_mode = 1
+
+[node name="Carta" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 48.0
 offset_bottom = 84.0
-pivot_offset = Vector2(24, 42)
-script = ExtResource("1_umsgb")
+texture = SubResource("CompressedTexture2D_5nl65")
 
-[node name="Sfondo" type="TextureRect" parent="."]
-layout_mode = 2
-stretch_mode = 2
+[node name="Button" type="Button" parent="Carta"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
 
-[node name="Bordo" type="TextureRect" parent="."]
-layout_mode = 2
-texture = ExtResource("2_sbimr")
-stretch_mode = 2
-
-[node name="barre" type="VBoxContainer" parent="."]
-layout_mode = 2
-
-[node name="topgap" type="MarginContainer" parent="barre"]
-layout_mode = 2
-
-[node name="TopBarra" type="HBoxContainer" parent="barre"]
-custom_minimum_size = Vector2(1, 1)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="barre/TopBarra"]
-custom_minimum_size = Vector2(4, 6)
-layout_mode = 2
-
-[node name="Nome" type="MarginContainer" parent="barre/TopBarra"]
-layout_direction = 3
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="barre/TopBarra/Nome"]
-layout_mode = 2
-
-[node name="nome" type="Label" parent="barre/TopBarra/Nome/CenterContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 8
-text = "scheletro"
-
-[node name="Gapdellacorsiacentrale" type="MarginContainer" parent="barre"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="TopBarra2" type="HBoxContainer" parent="barre"]
-custom_minimum_size = Vector2(48, 1)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="barre/TopBarra2"]
-custom_minimum_size = Vector2(4, 6)
-layout_mode = 2
-
-[node name="MarginContainer3" type="MarginContainer" parent="barre/TopBarra2"]
-layout_direction = 3
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="barre/TopBarra2/MarginContainer3"]
-custom_minimum_size = Vector2(20, 24)
-layout_mode = 2
-
-[node name="Mana" type="Label" parent="barre/TopBarra2/MarginContainer3/CenterContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 0
-theme_override_fonts/font = ExtResource("3_6nisj")
-theme_override_font_sizes/font_size = 7
-text = "2"
-
-[node name="MarginContainer2" type="MarginContainer" parent="barre/TopBarra2"]
-custom_minimum_size = Vector2(1, 0)
-layout_mode = 2
-
-[node name="focus" type="TextureButton" parent="."]
-layout_mode = 2
-texture_hover = ExtResource("4_n2012")
-
-[connection signal="mouse_entered" from="focus" to="." method="_on_focus_mouse_entered"]
-[connection signal="mouse_exited" from="focus" to="." method="_on_focus_mouse_exited"]
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 44.0
+offset_bottom = 21.0
