@@ -6,7 +6,7 @@ class_name Entity
 @export var hp : int = 100 : 
 	set(nhp): 
 		hp = nhp
-		#print(nhp)
+		print(name," ",hp)
 		if(hp<=0):
 			queue_free()
 		elif(hp >= 100):
@@ -14,3 +14,6 @@ class_name Entity
 
 @export var is_player : bool = 1 #1 = giocatore, 0 = nemico.
 
+func _ready():
+	if !is_player:
+		$AnimatedSprite2D.flip_h = true

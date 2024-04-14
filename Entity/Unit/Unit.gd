@@ -7,6 +7,7 @@ class_name Unit
 @export var dir : Vector2
 
 func _ready():
+	super()
 	if is_player:
 		base_dir = Vector2(1,0)
 	else:

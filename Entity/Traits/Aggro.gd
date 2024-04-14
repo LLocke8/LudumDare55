@@ -2,11 +2,11 @@ extends Area2D
 
 class_name Aggro
 
-@export var range : float = 200 :
-	set(nrange) : 
-		range = nrange
+@export var shape : Shape2D : 
+	set(newshape):
+		shape = newshape
 		if $CollisionShape2D != null:
-			$CollisionShape2D.shape.radius = range
+			$CollisionShape2D.shape = shape
 
 signal target_changed(ntarg : Entity)
 
@@ -23,8 +23,6 @@ func _ready():
 		set_collision_mask_value(2,1)
 		set_collision_mask_value(3,0)
 		set_collision_mask_value(4,0)
-	$CollisionShape2D.shape.radius = range
-	print($CollisionShape2D.shape.radius)
 
 func _on_body_entered(body):
 	if body is Entity and body != owner:

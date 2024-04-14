@@ -31,6 +31,7 @@ window/stretch/mode="canvas_items"
 2d_physics/layer_1="Player Units"
 2d_physics/layer_2="Player Structures"
 2d_physics/layer_3="Enemy Units"
+2d_physics/layer_4="Enemy Structures"
 
 [rendering]
 
