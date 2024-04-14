@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbmtd0mrvimbc"]
+[gd_scene load_steps=6 format=3 uid="uid://b5dp85eb3omw8"]
 
 [ext_resource type="PackedScene" uid="uid://bib0rhkp2hkud" path="res://Sistemi/Game_Manager.tscn" id="1_283vf"]
 [ext_resource type="Script" path="res://Map/Spawner.gd" id="1_y6y8x"]
@@ -31,6 +31,9 @@ shape = SubResource("RectangleShape2D_qdj1o")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Ui" parent="UI" instance=ExtResource("2_gdtdr")]
+offset_left = 2.0
+offset_right = 2.0
 
 [node name="TileMap" parent="." instance=ExtResource("3_islqw")]
 layer_0/tile_data = PackedInt32Array(0, 524288, 2, 65536, 524288, 2, 131072, 524288, 2, 196608, 524288, 2, 1, 524288, 2, 65537, 524288, 2, 131073, 524288, 2, 196609, 524288, 2, 2, 524288, 2, 65538, 524288, 2, 131074, 524288, 2, 196610, 524288, 2, 3, 524288, 2, 65539, 524288, 2, 131075, 524288, 2, 196611, 524288, 2, 131076, 524288, 2, 196612, 524288, 2, 5, 524288, 2, 6, 524288, 2, 7, 524288, 2, 65543, 524288, 2, 131079, 524288, 2, 196615, 524288, 2, 8, 524288, 2, 65544, 524288, 2, -65534, 524288, 2, 262144, 524288, 2, 262145, 524288, 2, 262143, 524288, 2, 327679, 524288, 2, 262148, 524288, 2, 131082, 524288, 2, 131083, 524288, 2, 131084, 524288, 2, 131085, 524288, 2, 131086, 524288, 2, 196622, 524288, 2, 262158, 524288, 2, 65535, 524288, 2)
+layer_1/tile_data = PackedInt32Array()
