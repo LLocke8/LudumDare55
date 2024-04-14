@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3s01sr4o4bi4"]
 
-[ext_resource type="Texture2D" uid="uid://gt54kfmnum1h" path="res://background/GameOver.jpg" id="1_dmo4o"]
 [ext_resource type="Script" path="res://Game_Over/Game_over.gd" id="1_upgvf"]
 [ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="2_fta6p"]
+[ext_resource type="Texture2D" uid="uid://dbt3f8qmx7jxk" path="res://background/GameOver1.jpg" id="2_icc1d"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -18,7 +18,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1, 1.06704)
-texture = ExtResource("1_dmo4o")
+texture = ExtResource("2_icc1d")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

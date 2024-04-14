@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://blxv2nh2d61c4"]
+[gd_scene load_steps=8 format=3 uid="uid://blxv2nh2d61c4"]
 
 [ext_resource type="Script" path="res://Main_menu/main_menu.gd" id="1_kklfb"]
-[ext_resource type="Texture2D" uid="uid://k3a4kh368mlc" path="res://background/menubackgroundsfocato.jpg" id="2_nu62c"]
+[ext_resource type="Texture2D" uid="uid://bxir633ng4opu" path="res://background/background.jpg" id="2_cvjwr"]
 [ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="3_nqi78"]
 [ext_resource type="PackedScene" uid="uid://p8schwksc6gl" path="res://Main_menu/Options_menu/options.tscn" id="3_ouuwk"]
+[ext_resource type="Texture2D" uid="uid://bncar3wo20o77" path="res://background/prova.png" id="3_tolj3"]
 [ext_resource type="AudioStream" uid="uid://bbk7dm4wgxcd6" path="res://music/prova.mp3" id="4_6c2ri"]
+[ext_resource type="StyleBox" uid="uid://djguoqrvt4qca" path="res://Main_menu/main_menu_styles.tres" id="4_mnp02"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -24,7 +26,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.99997, 1.01194)
-texture = ExtResource("2_nu62c")
+texture = ExtResource("2_cvjwr")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -40,21 +42,28 @@ theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 60
+theme_override_constants/separation = 27
 
-[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Separator2" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="Separator3" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_tolj3")
+stretch_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.52549, 0.00784314, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 8
-theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("3_nqi78")
 theme_override_font_sizes/font_size = 64
-text = "Card Game"
+text = "buddacci di merda.com"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -70,25 +79,38 @@ alignment = 1
 [node name="Separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="Separator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="Start_game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
 theme_override_fonts/font = ExtResource("3_nqi78")
 theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("4_mnp02")
 text = "Start Game"
 
 [node name="Options" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
 theme_override_fonts/font = ExtResource("3_nqi78")
 theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("4_mnp02")
 text = "Options"
 
 [node name="Exit_game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
+theme_override_colors/font_hover_color = Color(0.705882, 0.0862745, 0.176471, 1)
 theme_override_fonts/font = ExtResource("3_nqi78")
 theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("4_mnp02")
 text = "Exit Game"
 
 [node name="Options_menu" parent="." instance=ExtResource("3_ouuwk")]
@@ -99,4 +121,3 @@ layout_mode = 1
 stream = ExtResource("4_6c2ri")
 volume_db = -14.0
 autoplay = true
-bus = &"Music"

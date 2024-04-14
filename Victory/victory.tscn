@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="1_07ju8"]
 [ext_resource type="Script" path="res://Victory/victory.gd" id="1_apgbl"]
-[ext_resource type="Texture2D" uid="uid://dv6i1xrwmtatq" path="res://background/victory.jpg" id="1_xjhcg"]
+[ext_resource type="Texture2D" path="res://background/victory.jpg" id="1_xjhcg"]
 
 [node name="Victory" type="Control"]
 layout_mode = 3
