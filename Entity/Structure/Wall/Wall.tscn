@@ -30,3 +30,7 @@ sprite_frames = SubResource("SpriteFrames_mki85")
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_umlp5")
+
+[node name="health_bar" parent="." index="2"]
+max_value = 20.0
+value = 20.0
