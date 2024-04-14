@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb4qpasqitdxs"]
+
+[ext_resource type="Script" path="res://Carte/carta.gd" id="1_oq75u"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_puoy5"]
+load_path = "res://.godot/imported/ScheletroSpada.png-371ce407505c482c579ee909d87ffae6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5nl65"]
+load_path = "res://.godot/imported/Bordo.png-8097e12ce3899bd10fea925625bc5a8c.ctex"
+
+[node name="Carta" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oq75u")
+
+[node name="Immagine" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 16.0
+offset_right = 43.0
+offset_bottom = 55.0
+texture = SubResource("CompressedTexture2D_puoy5")
+expand_mode = 1
+
+[node name="Carta" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 84.0
+texture = SubResource("CompressedTexture2D_5nl65")
+
+[node name="Button" type="Button" parent="Carta"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 44.0
+offset_bottom = 21.0
