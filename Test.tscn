@@ -69,8 +69,8 @@ is_player = false
 position = Vector2(436, 475)
 
 [node name="Mage_Skeleton" parent="." instance=ExtResource("7_3x67x")]
-position = Vector2(659, 110)
+position = Vector2(179, 58)
 
 [node name="Mage_Skeleton2" parent="." instance=ExtResource("7_3x67x")]
-position = Vector2(708, 109)
+position = Vector2(1183, 69)
 is_player = false
