@@ -1,11 +1,11 @@
 extends Node2D
 
 #riferimento all'enemy spawner
-#var ES : EnemySpawner = ref
+@export var ES : Node
 #riferimento al mazzo 
 #var Mazzo : Mazzo = ref
 
-var UI : Node
+@export var UI : Node
 
 var MaxHPgiocatore : int = 10 :
 	set(Mhp): set_MaxHPgiocatore(Mhp)
@@ -47,7 +47,7 @@ func prossima_fase(nfase):
 	if !fase:
 		prossimo_turno()
 	if fase:
-		#fai partire le entita
+		ES.next_wave()
 		#get_tree().call_group("Entita","Start")
 		#impedisci al giocatore di giocare carte
 		#Mazzo.lock()
