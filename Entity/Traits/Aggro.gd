@@ -9,11 +9,8 @@ var target : Entity
 
 var is_locked : bool = false 
 
-func _on_collision_shape_2d_ready():
-	area = area
-
 func _on_body_entered(body):
-	if body is Entity:
+	if body is Entity and body != owner:
 		aggro_Entity(body)
 
 func update_aggro():
@@ -30,7 +27,7 @@ func check_aggro() -> Entity:
 	var distance = 9999
 	var closest_body : Entity
 	for body in bodies:
-		if body is Entity:
+		if body is Entity and body != owner:
 			var ndis = position.distance_to(body)
 			if ndis < distance:
 				distance = ndis
@@ -41,3 +38,5 @@ func aggro_Entity(Ent : Entity):
 	if Ent.is_player != owner.is_player and !is_locked:
 		target = Ent 
 		is_locked = true
+
+

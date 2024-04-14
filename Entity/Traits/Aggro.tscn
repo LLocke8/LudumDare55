@@ -14,4 +14,3 @@ position = Vector2(-1.5, -1)
 shape = SubResource("CircleShape2D_sjibd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="ready" from="CollisionShape2D" to="." method="_on_collision_shape_2d_ready"]

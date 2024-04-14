@@ -38,3 +38,4 @@ position = Vector2(203.5, 268)
 shape = SubResource("RectangleShape2D_jtjgt")
 
 [node name="Aggro" parent="." instance=ExtResource("3_voqnu")]
+area = 700.0

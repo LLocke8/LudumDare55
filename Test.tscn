@@ -4,9 +4,9 @@
 
 [node name="Test" type="Node2D"]
 
-[node name="Unit" parent="." instance=ExtResource("2_xnt64")]
+[node name="Test" parent="." instance=ExtResource("2_xnt64")]
 position = Vector2(113, -67)
 
-[node name="Unit2" parent="." instance=ExtResource("2_xnt64")]
+[node name="Test2" parent="." instance=ExtResource("2_xnt64")]
 position = Vector2(680, 161)
 is_player = false
