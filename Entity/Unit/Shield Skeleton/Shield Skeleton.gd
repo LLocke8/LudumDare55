@@ -10,5 +10,6 @@ func _process(delta):
 		dir = Vector2(0,0)
 	elif aggro_node.target != null:
 		dir = global_position.direction_to(aggro_node.target.global_position)
-
+	else:
+		dir = base_dir
 

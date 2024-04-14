@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dwxbiuq0dc3mi" path="res://Entity/Unit/Shield Skeleton/Shield Skeleton.tscn" id="3_78rvr"]
 [ext_resource type="PackedScene" uid="uid://dxp670ket68sq" path="res://Entity/Unit/Skeleton Archer/Skeleton Archer.tscn" id="3_fe5o3"]
 [ext_resource type="PackedScene" uid="uid://5sfooy35lit0" path="res://Entity/Structure/Coffin/Coffin.tscn" id="4_tftsh"]
-[ext_resource type="PackedScene" uid="uid://dmx5nctv43wj1" path="res://Entity/Unit/Mage Skeleton/Mage Skeleton.tscn" id="7_3x67x"]
+[ext_resource type="PackedScene" uid="uid://tqnh4uro0x17" path="res://Entity/Unit/Phantom/Phantom.tscn" id="7_pu2pi"]
 
 [node name="Test" type="Node2D"]
 
@@ -68,9 +68,16 @@ is_player = false
 [node name="Skeleton Archer6" parent="." instance=ExtResource("3_fe5o3")]
 position = Vector2(436, 475)
 
-[node name="Mage_Skeleton" parent="." instance=ExtResource("7_3x67x")]
-position = Vector2(659, 110)
+[node name="Phantom2" parent="." instance=ExtResource("7_pu2pi")]
+position = Vector2(82, 401)
+max_hp = 20
+hp = 3
 
-[node name="Mage_Skeleton2" parent="." instance=ExtResource("7_3x67x")]
-position = Vector2(708, 109)
+[node name="Phantom" parent="." instance=ExtResource("7_pu2pi")]
+position = Vector2(632, 59)
+max_hp = 1
+hp = 1
 is_player = false
+
+[node name="Sword_Skeleton3" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(76, 53)

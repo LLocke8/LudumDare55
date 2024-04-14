@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://tqnh4uro0x17"]
+
+[ext_resource type="PackedScene" uid="uid://dbqk4unb757py" path="res://Entity/Unit/Unit.tscn" id="1_bfj61"]
+[ext_resource type="Texture2D" uid="uid://brdbl36phq7ae" path="res://Entity/Unit/Phantom/Phantom.png" id="2_84x7x"]
+[ext_resource type="PackedScene" uid="uid://ciu0xt8d5rkf8" path="res://Entity/Traits/Attack.tscn" id="4_ilabc"]
+
+[sub_resource type="GDScript" id="GDScript_ej0t2"]
+script/source = "extends Unit
+
+class_name Phantom
+
+@export var aggro_node : Node
+@export var attack_node : Node
+
+func _process(delta):
+	if attack_node.target != null:
+		dir = Vector2(0,0)
+	elif aggro_node.target != null:
+		dir = global_position.direction_to(aggro_node.target.global_position)
+	else:
+		dir = base_dir
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o5pce"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_84x7x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2rh5"]
+size = Vector2(26, 28)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0gmvt"]
+radius = 100.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xjk2g"]
+radius = 35.0
+
+[node name="Phantom" node_paths=PackedStringArray("aggro_node", "attack_node") instance=ExtResource("1_bfj61")]
+script = SubResource("GDScript_ej0t2")
+aggro_node = NodePath("Aggro")
+attack_node = NodePath("Attack")
+speed = 60
+max_hp = 4
+hp = 4
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_o5pce")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_h2rh5")
+
+[node name="Aggro" parent="." index="2"]
+shape = SubResource("CircleShape2D_0gmvt")
+
+[node name="Attack" parent="." index="3" instance=ExtResource("4_ilabc")]
+damage = 4
+attack_speed = 1.0
+shape = SubResource("CircleShape2D_xjk2g")
