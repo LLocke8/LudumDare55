@@ -1,12 +1,68 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwra2p7xauv73"]
+[gd_scene load_steps=7 format=3 uid="uid://cwra2p7xauv73"]
 
-[ext_resource type="PackedScene" uid="uid://dp282v0vopkeu" path="res://Entity/Unit/Unit.tscn" id="2_xnt64"]
+[ext_resource type="PackedScene" uid="uid://dwoo0lgqx82qh" path="res://Entity/Structure/Wall/Wall.tscn" id="2_4tyie"]
+[ext_resource type="PackedScene" uid="uid://d2l5eip2jqyqm" path="res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn" id="2_vbdbj"]
+[ext_resource type="PackedScene" uid="uid://b05qtclshq1ub" path="res://Entity/Structure/Wisp turret/Wisp turret.tscn" id="3_6mhdu"]
+[ext_resource type="PackedScene" uid="uid://dwxbiuq0dc3mi" path="res://Entity/Unit/Shield Skeleton/Shield Skeleton.tscn" id="3_78rvr"]
+[ext_resource type="PackedScene" uid="uid://dxp670ket68sq" path="res://Entity/Unit/Skeleton Archer/Skeleton Archer.tscn" id="3_fe5o3"]
+[ext_resource type="PackedScene" uid="uid://5sfooy35lit0" path="res://Entity/Structure/Coffin/Coffin.tscn" id="4_tftsh"]
 
 [node name="Test" type="Node2D"]
 
-[node name="Test" parent="." instance=ExtResource("2_xnt64")]
-position = Vector2(113, -67)
-
-[node name="Test2" parent="." instance=ExtResource("2_xnt64")]
-position = Vector2(680, 161)
+[node name="Wall" parent="." instance=ExtResource("2_4tyie")]
+position = Vector2(741, 248)
 is_player = false
+
+[node name="Skeleton Archer" parent="." instance=ExtResource("3_fe5o3")]
+position = Vector2(881, 192)
+is_player = false
+
+[node name="Skeleton Archer2" parent="." instance=ExtResource("3_fe5o3")]
+position = Vector2(892, 291)
+is_player = false
+
+[node name="Shield_Skeleton" parent="." instance=ExtResource("3_78rvr")]
+position = Vector2(490, 178)
+
+[node name="Sword_Skeleton" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(492, 307)
+
+[node name="Coffin" parent="." instance=ExtResource("4_tftsh")]
+position = Vector2(299, 204)
+
+[node name="Coffin2" parent="." instance=ExtResource("4_tftsh")]
+position = Vector2(303, 289)
+
+[node name="Wisp Turret" parent="." instance=ExtResource("3_6mhdu")]
+position = Vector2(793, 242)
+is_player = false
+
+[node name="Sword_Skeleton2" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(495, 522)
+
+[node name="Skeleton Archer3" parent="." instance=ExtResource("3_fe5o3")]
+position = Vector2(387, 518)
+
+[node name="Wisp Turret2" parent="." instance=ExtResource("3_6mhdu")]
+position = Vector2(762, 521)
+is_player = false
+
+[node name="Skeleton Archer4" parent="." instance=ExtResource("3_fe5o3")]
+position = Vector2(896, 515)
+is_player = false
+
+[node name="Skeleton Archer5" parent="." instance=ExtResource("3_fe5o3")]
+position = Vector2(435, 564)
+
+[node name="Wall2" parent="." instance=ExtResource("2_4tyie")]
+position = Vector2(299, 520)
+
+[node name="Wisp Turret3" parent="." instance=ExtResource("3_6mhdu")]
+position = Vector2(222, 517)
+
+[node name="Coffin3" parent="." instance=ExtResource("4_tftsh")]
+position = Vector2(962, 509)
+is_player = false
+
+[node name="Skeleton Archer6" parent="." instance=ExtResource("3_fe5o3")]
+position = Vector2(436, 475)

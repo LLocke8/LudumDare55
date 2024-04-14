@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwra2p7xauv73"]
+
+[ext_resource type="PackedScene" uid="uid://dwoo0lgqx82qh" path="res://Entity/Structure/Wall/Wall.tscn" id="2_4tyie"]
+[ext_resource type="PackedScene" uid="uid://d2l5eip2jqyqm" path="res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn" id="2_vbdbj"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Entity" parent="." instance=ExtResource("2_4tyie")]
+position = Vector2(481, 222)
+
+[node name="Entity3" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(576, 414)
+
+[node name="Entity4" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(948, 405)
+is_player = false
+
+[node name="Entity2" parent="." instance=ExtResource("2_vbdbj")]
+position = Vector2(522, 615)

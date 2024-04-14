@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwoo0lgqx82qh"]
+
+[ext_resource type="PackedScene" uid="uid://dx7fd761jhhkb" path="res://Entity/Structure/Structure.tscn" id="1_g1xi8"]
+[ext_resource type="Script" path="res://Entity/Structure/Wall/Wall.gd" id="2_cw3dt"]
+[ext_resource type="Texture2D" uid="uid://cdwu8rgyhccbp" path="res://Entity/Structure/Wall/Muro di tronchi.png" id="3_kroxa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mki85"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kroxa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umlp5"]
+size = Vector2(24, 48)
+
+[node name="Wall" instance=ExtResource("1_g1xi8")]
+collision_mask = 1
+script = ExtResource("2_cw3dt")
+max_hp = 20
+hp = 20
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_mki85")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_umlp5")
