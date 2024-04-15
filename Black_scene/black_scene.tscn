@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqyer4l7ec5kr"]
+
+[ext_resource type="Script" path="res://Black_scene/black_scene.gd" id="1_heino"]
+[ext_resource type="Texture2D" uid="uid://nq0i7jboi7l5" path="res://Black_scene/black.jpg" id="1_xoc8m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_heino")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xoc8m")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.016
+offset_left = 489.0
+offset_top = 163.0
+offset_right = 724.12
+offset_bottom = 311.48
+text = "PROVA 2 "
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 356.0
+offset_right = 742.0
+offset_bottom = 446.0
+text = "Prova 2 "
