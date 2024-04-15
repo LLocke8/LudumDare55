@@ -20,13 +20,14 @@ var HPgiocatore : int = 10 :
 			pass
 		elif HPgiocatore > MaxHPgiocatore:
 			HPgiocatore = MaxHPgiocatore
-		UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
+		UI.HP.text = "HP \n" + str(HPgiocatore) + "/" +str(MaxHPgiocatore)
 
 var MaxHPnemico : int = 10 : 
 	set(nhpnem) :
 		MaxHPnemico = nhpnem
 		if HPnemico > MaxHPnemico:
 			HPnemico = MaxHPnemico
+		UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
 
 var HPnemico : int = 10 :
 	set(nhpnem): 
@@ -35,7 +36,7 @@ var HPnemico : int = 10 :
 			victory()
 		elif HPnemico > MaxHPnemico:
 			HPnemico = MaxHPnemico
-		#modifica UI
+        UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
 
 var turno : bool = 0 : 
 	set(nturno):
