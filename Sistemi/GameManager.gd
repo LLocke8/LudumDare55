@@ -55,7 +55,7 @@ var unit_amount : int = 0 :
 		unit_amount = namnt
 		if fase and unit_amount <= 0:
 			prossima_fase()
-		print(unit_amount)
+
 
 var current_turn : int = 0 :
 		set(nturn):

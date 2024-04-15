@@ -12,7 +12,7 @@ const DATA = {
 	'Phantom':
 		['',3, 4, "res://Carte/Sprite Carte/Carta Phantom.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Phantom/Phantom.tscn"],
 	'Living Armor':
-		['',7, 70, "res://Carte/Sprite Carte/Carta Bullone.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Living Wisp/Living_Wisp.tscn"],
+		['',7, 60, "res://Carte/Sprite Carte/Carta Bullone.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Living Wisp/Living_Wisp.tscn"],
 	'Sorcerer':
 		['',3, 5, "res://Carte/Sprite Carte/Carta Sorcerer.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Mage Skeleton/Mage Skeleton.tscn"],
 	'Heal' :
@@ -22,7 +22,7 @@ const DATA = {
 	'Tomb' :
 		['',3, 3, "res://Carte/Sprite Carte/Coffin.png", 'lasts until it has hp remaining. Loses 1hp per turn, summon up to 4 skeleton swordman each tun, 1 every 15s',"res://Carte/carta.tscn","res://Entity/Structure/Coffin/Coffin.tscn",],
 	'Wooden Wall' :
-		['',1, 20, "res://Carte/Sprite Carte/wall.png", 'Lasts until destroyed. Nothing particular, blocks enemies and damage, what did you expect.', "res://Carte/carta.tscn","res://Entity/Structure/Wall/Wall.tscn"],
+		['',1, 25, "res://Carte/Sprite Carte/wall.png", 'Lasts until destroyed. Nothing particular, blocks enemies and damage, what did you expect.', "res://Carte/carta.tscn","res://Entity/Structure/Wall/Wall.tscn"],
 	'Soul Turret' :
 		['',2, 10, "res://Carte/Sprite Carte/Soulturret.png", 'Lasts until destroyed. Shoots magical fire as projectiles. Can hit ghosts.', "res://Carte/carta.tscn","res://Entity/Structure/Wisp turret/Wisp turret.tscn"]
 		

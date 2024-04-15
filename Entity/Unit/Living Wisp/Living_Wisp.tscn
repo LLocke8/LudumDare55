@@ -30,8 +30,8 @@ script = ExtResource("2_ickbr")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
 speed = 45
-max_hp = 70
-hp = 70
+max_hp = 50
+hp = 60
 damage_to_opponent = 8
 
 [node name="AnimatedSprite2D" parent="." index="0"]

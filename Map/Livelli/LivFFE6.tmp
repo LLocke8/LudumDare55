@@ -13,7 +13,6 @@ Waves = [{
 "Skeleton swordman": [Vector2(1200, 60), Vector2(1200, 65), Vector2(1200, 520), Vector2(1200, 525)]
 }, {
 "Skeleton Archer": [Vector2(1200, 275)],
-"Skeleton swordman": [Vector2(1200, 60), Vector2(1210, 65), Vector2(1200, 520), Vector2(1210, 525)],
 "Tank Skeleton": [Vector2(1200, 285)]
 }]
 
