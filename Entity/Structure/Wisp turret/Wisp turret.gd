@@ -7,6 +7,6 @@ class_name wisp_turret
 func _ready():
 	super()
 	if is_player:
-		attack_node.position += Vector2(200,0)
+		attack_node.position += Vector2(80,0)
 	else:
-		attack_node.position += Vector2(-200,0)
+		attack_node.position += Vector2(-80,0)

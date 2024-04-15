@@ -20,7 +20,7 @@ animations = [{
 size = Vector2(48, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xk20"]
-size = Vector2(175, 40)
+size = Vector2(220, 70)
 
 [node name="Wisp Turret" node_paths=PackedStringArray("attack_node") instance=ExtResource("1_8koxj")]
 script = ExtResource("2_4ktx3")
