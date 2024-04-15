@@ -36,7 +36,7 @@ var HPnemico : int = 10 :
 			victory()
 		elif HPnemico > MaxHPnemico:
 			HPnemico = MaxHPnemico
-        UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
+		UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
 
 var turno : bool = 0 : 
 	set(nturno):
