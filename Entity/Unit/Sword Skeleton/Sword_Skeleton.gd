@@ -5,6 +5,9 @@ class_name Sword_Skeleton
 @export var aggro_node : Node
 @export var attack_node : Node
 
+
+	
+
 func _process(delta):
 	if !is_stopped:
 		if attack_node.target != null:
