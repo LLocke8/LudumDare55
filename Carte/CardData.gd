@@ -10,11 +10,11 @@ const DATA = {
 	'Tank Skeleton' :
 		['',1, 13, "res://Carte/Sprite Carte/Carta Scudo.png", "","res://Carte/Carta.tscn","res://Entity/Unit/Shield Skeleton/Shield Skeleton.tscn"],
 	'Phantom':
-		['',3, 4, "res://Carte/Sprite Carte/Carta Phantom.png",'',"res://Carte/carta.tscn",],
-	'Ghostly Armor':
-		['',7, 50, "res://Carte/Sprite Carte/Carta Bullone.png",'',"res://Carte/carta.tscn",],
+		['',3, 4, "res://Carte/Sprite Carte/Carta Phantom.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Phantom/Phantom.tscn"],
+	'Living Armor':
+		['',7, 50, "res://Carte/Sprite Carte/Carta Bullone.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Living Wisp/Living_Wisp.tscn"],
 	'Sorcerer':
-		['',3, 5, "res://Carte/Sprite Carte/Carta Sorcerer.png",'',"res://Carte/carta.tscn",],
+		['',3, 5, "res://Carte/Sprite Carte/Carta Sorcerer.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Mage Skeleton/Mage Skeleton.tscn"],
 	'Heal' :
 		['',3, 0, "res://Carte/Sprite Carte/Carta Heal.png", 'Restores 5hp to yourself',"res://Carte/carta.tscn", ''],
 	'Soul Piercer' :
