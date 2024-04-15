@@ -43,7 +43,9 @@ shape = SubResource("RectangleShape2D_yji5j")
 [node name="Aggro" parent="." index="2"]
 shape = SubResource("CircleShape2D_klu2i")
 
-[node name="Attack" parent="." index="3" instance=ExtResource("4_ilabc")]
+[node name="Attack" parent="." index="3" node_paths=PackedStringArray("animation") instance=ExtResource("4_ilabc")]
 damage = 4
 attack_speed = 1.0
+animation = NodePath("../AnimationPlayer")
+is_melee = true
 shape = SubResource("CircleShape2D_q76vu")

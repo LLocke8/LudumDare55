@@ -9,6 +9,7 @@
 script = ExtResource("1_ht32l")
 damage = 10
 attack_speed = 2.0
+is_melee = false
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CircleShape2D_0m74p")

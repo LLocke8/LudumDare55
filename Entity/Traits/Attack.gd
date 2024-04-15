@@ -14,8 +14,10 @@ class_name Attack
 
 @export var primary : Node
 
-var can_attack : bool = true
+@export var animation : Node
 
+var can_attack : bool = true
+@export var is_melee : bool = false
 
 func _process(delta):
 	if primary == null:
@@ -27,6 +29,11 @@ func _process(delta):
 
 func attack():
 	if can_attack:
+		if is_melee:
+			if owner.is_player:
+				animation.play("Attack")
+			else:
+				animation.play("Attack_enemy")
 		target.hp -= damage
 		$Attack_speed.start()
 		can_attack = false
