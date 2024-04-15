@@ -5,6 +5,7 @@ extends Control
 @onready var start_game = $MarginContainer/HBoxContainer/VBoxContainer/Start_game as Button
 @onready var options = $MarginContainer/HBoxContainer/VBoxContainer/Options as Button
 @onready var exit_game = $MarginContainer/HBoxContainer/VBoxContainer/Exit_game as Button
+@onready var continue_game = $MarginContainer/HBoxContainer/VBoxContainer/Continue_game as Button
 @onready var options_menu = $Options_menu as OptionMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 #Mettere la scena principale 
@@ -29,10 +30,14 @@ func on_exit_pressed()-> void:
 func on_exit_options_menu() -> void: 
 	margin_container.visible = true
 	options_menu.visible = false
+	
+func on_continue_game_pressed() -> void: 
+	pass
 
 func handle_connecting_signals() -> void:
 	start_game.button_down.connect(on_start_pressed)
 	options.button_down.connect(on_options_pressed)
 	exit_game.button_down.connect(on_exit_pressed)
 	options_menu.exit_options_menu.connect(on_exit_options_menu)
+	continue_game.button_down.connect(on_continue_game_pressed)
 
