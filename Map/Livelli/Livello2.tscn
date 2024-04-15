@@ -16,7 +16,9 @@ Waves = [{
 "Phantom": [Vector2(1100, 80), Vector2(1100, 520)],
 "Skeleton Archer": [Vector2(1100, 300)],
 "Tank Skeleton": [Vector2(1100, 270)]
-}, {}]
+}, {
+"Mage Skeleton": [Vector2(1100, 85), Vector2(1100, 300), Vector2(1100, 520)]
+}]
 
 [node name="DeckManager" parent="." index="2"]
 STARTING_DECK = ["Tank Skeleton", "Skeleton Archer", "Tomb", "Phantom", "Soul Turret", "Tank Skeleton", "Tank Skeleton", "Skeleton Archer", "Skeleton Archer", "Tomb", "Phantom", "Phantom", "Soul Turret", "Sorcerer", "Skeleton swordman", "Skeleton swordman", "Skeleton swordman", "Wooden Wall", "Wooden Wall"]
