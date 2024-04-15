@@ -37,6 +37,7 @@ func attack():
 		target.hp -= damage
 		$Attack_speed.start()
 		can_attack = false
+		$AudioStreamPlayer.play()
 	#fai partile l'animazione d'attacco 
 
 func _on_attack_speed_timeout():

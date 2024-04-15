@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Main_menu/main_menu.gd" id="1_16nhh"]
 [ext_resource type="Texture2D" uid="uid://bxir633ng4opu" path="res://Scenes/background/background.jpg" id="2_agv0n"]
-[ext_resource type="FontFile" path="res://font/DUNGRG__.TTF" id="3_mnovo"]
+[ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://font/DUNGRG__.TTF" id="3_mnovo"]
 [ext_resource type="StyleBox" uid="uid://djguoqrvt4qca" path="res://Scenes/Main_menu/main_menu_styles.tres" id="4_go8j6"]
 [ext_resource type="PackedScene" uid="uid://p8schwksc6gl" path="res://Scenes/Main_menu/Options_menu/options.tscn" id="5_vainc"]
 [ext_resource type="AudioStream" uid="uid://bnok77j3e4bsc" path="res://music/upbeat_ost.mp3" id="7_o2cap"]

@@ -55,6 +55,7 @@ func play_selected(pos):
 	if CartaSelezionata.costo <= Anime:
 		Anime -= CartaSelezionata.costo
 		CartaSelezionata.play_card(pos)
+		$Placement.play()
 		CartaSelezionata = null
 	else:
 		pass

@@ -77,6 +77,7 @@ func prossimo_turno():
 
 func prossima_fase():
 	fase = !fase
+	$Switch.play()
 	if fase: #combattimento
 		get_tree().call_group("Entity","on_next_phase",fase)
 		Mazzo.on_next_phase(fase)
