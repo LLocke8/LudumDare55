@@ -30,7 +30,7 @@ position = Vector2(86, 71)
 script = ExtResource("2_je3e2")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
-speed = 30
+speed = 60
 max_hp = 13
 hp = 13
 

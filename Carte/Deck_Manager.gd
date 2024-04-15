@@ -15,7 +15,7 @@ var CartaSelezionata : Node
 
 #var Maxanime : int = 5 :
 	#set(maxa): set_Maxanime(maxa)
-var Anime : int = 5 :
+var Anime : int = 10 :
 	set(nanime): 
 		Anime = nanime
 		#if Anime > Maxanime:

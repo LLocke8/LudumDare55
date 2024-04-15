@@ -7,6 +7,10 @@ extends Node2D
 
 @export var UI : Node
 
+@export var saveload : Node 
+
+@export var current_level = 1
+
 var MaxHPgiocatore : int = 10 :
 	set(Mhp): 
 		MaxHPgiocatore = Mhp 
@@ -16,8 +20,7 @@ var HPgiocatore : int = 10 :
 	set(hp): 
 		HPgiocatore = hp 
 		if HPgiocatore <= 0:
-			#vai a scena di game over. 
-			pass
+			defeat()
 		elif HPgiocatore > MaxHPgiocatore:
 			HPgiocatore = MaxHPgiocatore
 		UI.HP.text = "HP \n" + str(HPgiocatore) + "/" +str(MaxHPgiocatore)
@@ -36,7 +39,7 @@ var HPnemico : int = 10 :
 			victory()
 		elif HPnemico > MaxHPnemico:
 			HPnemico = MaxHPnemico
-		UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
+		UI.HPnemico.text = "Enemy HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
 
 var turno : bool = 0 : 
 	set(nturno):
@@ -49,7 +52,7 @@ var turno : bool = 0 :
 		return turno
 		
 
-var fase : bool = 0 #0 per preparazione, 1 per comabttimento
+var fase : bool = 0 #0 per preparazione, 1 per combattimento
 
 var unit_amount : int = 0 :
 	set(namnt):
@@ -57,17 +60,19 @@ var unit_amount : int = 0 :
 		if fase and unit_amount <= 0:
 			prossima_fase()
 
+
 var current_turn : int = 0 :
-	set(nturn):
-		current_turn = nturn 
-		if current_turn >= ES.Waves.size():
-			victory()
+		set(nturn):
+			current_turn = nturn
+			if current_turn >= ES.Waves.size():
+				victory()
 
 func _ready():
 	ES.Spawn_wave(current_turn)
+	saveload.save_game(current_level)
 
 func prossimo_turno():
-	current_turn += 1
+	current_turn+=1
 	turno = !turno
 
 func prossima_fase():
@@ -98,9 +103,13 @@ func damagearea_entered(body):
 		body.queue_free()
 
 func victory():
-	pass
-	#cambia livello
+	match current_level:
+		1:
+			get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello2.tscn"))
+		2:
+			get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello3.tscn"))
+		3:
+			get_tree().change_scene_to_packed(load("res://Scenes/Victory/victory.tscn"))
 
 func defeat():
-	pass
-	#porta alla scena di defeat
+	get_tree().change_scene_to_packed(load("res://Scenes/Game_Over/Game_over.tscn"))

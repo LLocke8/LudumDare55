@@ -29,9 +29,10 @@ radius = 35.0
 script = ExtResource("2_76mpt")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
-speed = 30
+speed = 60
 max_hp = 7
 hp = 7
+damage_to_opponent = 2
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 scale = Vector2(0.994791, 0.990365)
