@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsyatjfjk6sqw"
-path="res://.godot/imported/StartButton.png-3afab8da5398178e2caeb43732ad3ccb.ctex"
+uid="uid://b63croq1mllw7"
+path="res://.godot/imported/Carta Sorcerer.png-50b134b878623ab5508fd4b4c7350fae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sistemi/StartButton.png"
-dest_files=["res://.godot/imported/StartButton.png-3afab8da5398178e2caeb43732ad3ccb.ctex"]
+source_file="res://Carte/Sprite Carte/Carta Sorcerer.png"
+dest_files=["res://.godot/imported/Carta Sorcerer.png-50b134b878623ab5508fd4b4c7350fae.ctex"]
 
 [params]
 
