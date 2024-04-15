@@ -48,8 +48,6 @@ var turno : bool = 0 :
 		return turno
 		
 
-@export var quantita_wave : int = 5
-
 var fase : bool = 0 #0 per preparazione, 1 per comabttimento
 
 var unit_amount : int = 0 :
@@ -64,7 +62,7 @@ var current_turn : int = 0
 func _ready():
 	ES.Spawn_wave(turno)
 	current_turn += 1
-	if current_turn > quantita_wave:
+	if current_turn > ES.Waves.size():
 		victory()
 
 func prossimo_turno():
