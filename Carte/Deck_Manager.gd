@@ -22,7 +22,6 @@ var Anime : int = 20 :
 			#Anime = Maxanime
 		nodoui.Mana.text = "Mana \n" + str(Anime)
 
-
 var anime_turno : int = 5 
 
 func _ready():

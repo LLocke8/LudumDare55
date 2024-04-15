@@ -2,7 +2,7 @@ extends Structure
 
 class_name Coffin
 
-var unit = preload("res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn")
+var unit = load("res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn")
 
 var units_spawned : int = 0
 
@@ -17,16 +17,17 @@ var offset : Vector2
 func _ready():
 	super()
 	if is_player:
-		offset = Vector2(80,0)
+		offset = Vector2(50,0)
 	else:
-		offset = Vector2(0,80)
+		offset = Vector2(-50,0)
 
 func _on_spawn_time_timeout():
-	if units_spawned < 4:
+	if units_spawned < 4 and !is_stopped:
 		var instance = unit.instantiate()
 		instance.position = global_position + offset 
 		instance.is_player = is_player
-		owner.add_child(instance) #cambiare per aggiungere nodo al nodo "mondo" 
+		instance.is_stopped = 0
+		get_parent().add_child(instance) #cambiare per aggiungere nodo al nodo "mondo" 
 		units_spawned += 1
 
 func _on_spawn_time_ready():

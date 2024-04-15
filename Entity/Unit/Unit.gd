@@ -49,6 +49,7 @@ func on_next_phase(phase):
 	if phase: #Combattimento
 		is_stopped = false
 	else: #preparazione
+		pass
 		queue_free() #despawna 
 
 func _on_tree_exiting():
