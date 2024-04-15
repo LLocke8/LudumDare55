@@ -1,9 +1,14 @@
 extends Control
 
+@onready var change = $Button as Button
+
+
 func _ready():
-	# Mostra tutto all'inizio
-	$TextureRect.visible = true
-	$Label.visible = true
-	$Button.visible = true
+	handle_connecting_signals()
+
 	
-func 
+func on_change_pressed() -> void:
+	
+
+func handle_connecting_signals() -> void:
+	change.button_down.connect(on_change_pressed)
