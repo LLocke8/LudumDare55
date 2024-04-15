@@ -19,7 +19,7 @@ func _ready():
 		set_collision_mask_value(3,0)
 		set_collision_mask_value(4,0)
 	dir = base_dir
-	
+	get_tree().get_root().get_node("MainMap").get_node("GameManager").unit_amount += 1
 
 func _physics_process(delta):
 	var movement = move(delta,dir)
@@ -51,3 +51,5 @@ func on_next_phase(phase):
 	else: #preparazione
 		queue_free() #despawna 
 
+func _on_tree_exiting():
+	get_tree().get_root().get_node("MainMap").get_node("GameManager").unit_amount -= 1

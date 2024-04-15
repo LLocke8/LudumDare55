@@ -32,7 +32,6 @@ mouse_filter = 1
 text = "test"
 
 [node name="HP" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = 51.0
@@ -42,7 +41,6 @@ text = "fdfd"
 metadata/_edit_group_ = true
 
 [node name="Mana" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_top = 60.0
 offset_right = 40.0

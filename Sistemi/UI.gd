@@ -7,5 +7,8 @@ extends Control
 @export var deck : Node
 @export var gm : Node
 
+var lock : bool = false
+
 func _on_start_pressed():
-	gm.prossima_fase()
+	if !lock:
+		gm.prossima_fase()
