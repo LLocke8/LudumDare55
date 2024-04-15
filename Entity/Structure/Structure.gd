@@ -15,8 +15,8 @@ func _ready():
 		set_collision_mask_value(3,0)
 		set_collision_mask_value(4,0)
 	
-func _on_new_turn():
-	pass
-
-func _on_new_phase():
-	pass
+func on_next_phase(phase):
+	if phase: #Combattimento
+		is_stopped = false
+	else: #preparazione
+		is_stopped = true

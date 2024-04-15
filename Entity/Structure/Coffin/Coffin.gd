@@ -33,12 +33,12 @@ func _on_spawn_time_ready():
 	$spawn_time.wait_time = spawn_time
 	$spawn_time.start()
 
-func _on_new_turn():
-	hp -= 1
-	units_spawned = 0
-
-func _on_new_phase():
-	if $spawn_time.is_stopped():
+func on_next_phase(phase):
+	if phase: #Combattimento
+		is_stopped = false
 		$spawn_time.start()
-	else:
+	else: #preparazione
+		is_stopped = true
 		$spawn_time.stop()
+		hp -= 1
+		units_spawned = 0

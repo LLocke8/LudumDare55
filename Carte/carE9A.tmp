@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb4qpasqitdxs"]
+
+[ext_resource type="Texture2D" uid="uid://cdmpfx607481x" path="res://Carte/carta.tres" id="1_bfl8n"]
+[ext_resource type="Script" path="res://Carte/carta.gd" id="1_oq75u"]
+
+[node name="Carta" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bfl8n")
+stretch_mode = 2
+script = ExtResource("1_oq75u")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 44.0
+offset_bottom = 21.0
+mouse_filter = 1
+text = "test"
+
+[node name="HP" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 51.0
+offset_right = 41.0
+offset_bottom = 74.0
+text = "fdfd"
+metadata/_edit_group_ = true
+
+[node name="Mana" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 60.0
+offset_right = 40.0
+offset_bottom = 83.0
+text = "fdsf"
+metadata/_edit_group_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqhera20j2q51"]
+
+[ext_resource type="Script" path="res://Carte/carta.gd" id="1_umsgb"]
+
+[node name="Carta" type="MarginContainer"]
+offset_right = 48.0
+offset_bottom = 82.0
+pivot_offset = Vector2(24, 41)
+script = ExtResource("1_umsgb")

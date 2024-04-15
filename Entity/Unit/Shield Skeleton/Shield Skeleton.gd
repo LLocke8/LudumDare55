@@ -12,4 +12,3 @@ func _process(delta):
 		dir = global_position.direction_to(aggro_node.target.global_position)
 	else:
 		dir = base_dir
-
