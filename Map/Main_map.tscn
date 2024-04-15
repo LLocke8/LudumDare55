@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=25 format=3 uid="uid://cod34d8muen7y"]
+[gd_scene load_steps=26 format=3 uid="uid://cod34d8muen7y"]
 
 [ext_resource type="PackedScene" uid="uid://bib0rhkp2hkud" path="res://Sistemi/Game_Manager.tscn" id="1_283vf"]
 [ext_resource type="Script" path="res://Map/Spawner.gd" id="1_y6y8x"]

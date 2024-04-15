@@ -8,14 +8,13 @@ extends Control
 @onready var continue_game = $MarginContainer/HBoxContainer/VBoxContainer/Continue_game as Button
 @onready var options_menu = $Options_menu as OptionMenu
 @onready var margin_container = $MarginContainer as MarginContainer
-#Mettere la scena principale 
-#@onready var start_level = preload("")
+@onready var start_level = preload("res://Map/Livelli/Livello1.tscn")
 
 func _ready():
 	handle_connecting_signals()
 
 func on_start_pressed() -> void:
-	#get_tree().change_scene_to_packed(start_level)
+	get_tree().change_scene_to_packed(start_level)
 	pass
 
 func on_options_pressed() -> void:

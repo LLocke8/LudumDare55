@@ -104,9 +104,13 @@ func damagearea_entered(body):
 		body.queue_free()
 
 func victory():
-	pass
-	#cambia livello
+	match current_level:
+		1:
+			get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello2.tscn"))
+		2:
+			get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello3.tscn"))
+		3:
+			get_tree().change_scene_to_packed(load("res://Scenes/Victory/victory.tscn"))
 
 func defeat():
-	pass
-	#porta alla scena di defeat
+	get_tree().change_scene_to_packed(load("res://Scenes/Game_Over/Game_over.tscn"))

@@ -24,13 +24,9 @@ func load_game():
 			var json = JSON.new()
 			var parse_result = json.parse(json_string)
 			node_data = json.get_data()
-
 		
-	match node_data["Level"]:
-		1:
-			pass #get_tree().change_scene_to_packed(preload(""))
-		2:
-			pass #get_tree().change_scene_to_packed(preload(""))
-		3:
-			pass #get_tree().change_scene_to_packed(preload(""))
+		match node_data["Level"]:
+			1: get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello1.tscn"))
+			2: get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello2.tscn"))
+			3: get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello3.tscn"))
 
