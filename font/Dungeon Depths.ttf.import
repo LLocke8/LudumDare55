@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cdsdtlmt48u4i"
-path="res://.godot/imported/DUNGRG__.TTF-158d327e176b3ef7953c311699fb862a.fontdata"
+uid="uid://b8b7vjenap4da"
+path="res://.godot/imported/Dungeon Depths.ttf-15c765e9a91f1daa3dee484fb0dc2578.fontdata"
 
 [deps]
 
-source_file="res://fonts/DUNGRG__.TTF"
-dest_files=["res://.godot/imported/DUNGRG__.TTF-158d327e176b3ef7953c311699fb862a.fontdata"]
+source_file="res://font/Dungeon Depths.ttf"
+dest_files=["res://.godot/imported/Dungeon Depths.ttf-15c765e9a91f1daa3dee484fb0dc2578.fontdata"]
 
 [params]
 

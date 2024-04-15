@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6lsalty3f38y"]
 
-[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="1_07ju8"]
-[ext_resource type="Script" path="res://Victory/victory.gd" id="1_apgbl"]
-[ext_resource type="Texture2D" uid="uid://dv6i1xrwmtatq" path="res://background/victory.jpg" id="1_xjhcg"]
-[ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://fonts/DUNGRG__.TTF" id="4_qpy47"]
+[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://font/MedievalSharp-Regular.ttf" id="1_07ju8"]
+[ext_resource type="Script" path="res://Scenes/Victory/victory.gd" id="1_apgbl"]
+[ext_resource type="Texture2D" uid="uid://dv6i1xrwmtatq" path="res://Scenes/background/victory.jpg" id="1_xjhcg"]
+[ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://font/DUNGRG__.TTF" id="4_qpy47"]
 
 [node name="Victory" type="Control"]
 layout_mode = 3
@@ -103,4 +103,4 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.65098, 0.152941, 1)
 theme_override_fonts/font = ExtResource("4_qpy47")
 theme_override_font_sizes/font_size = 50
-text = "New Game"
+text = "Return to menu"

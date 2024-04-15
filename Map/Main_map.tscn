@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=25 format=3 uid="uid://cod34d8muen7y"]
 
 [ext_resource type="PackedScene" uid="uid://bib0rhkp2hkud" path="res://Sistemi/Game_Manager.tscn" id="1_283vf"]
@@ -5,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://8ec3stwp4kj6" path="res://Sistemi/UI.tscn" id="2_gdtdr"]
 [ext_resource type="Script" path="res://Carte/Deck_Manager.gd" id="3_ip5mf"]
 [ext_resource type="PackedScene" uid="uid://b7l10nfev0lyt" path="res://Map/tile_map.tscn" id="3_islqw"]
+[ext_resource type="PackedScene" uid="uid://bi71harkkxh87" path="res://Scenes/SaveLevel.tscn" id="4_21tcy"]
 [ext_resource type="Texture2D" uid="uid://dkkpt8ofwcvf5" path="res://Map/Tile set Finale.png" id="5_qn1u8"]
 [ext_resource type="Texture2D" uid="uid://du17m1c3xl4e" path="res://Map/Tile Set Decorazioni.png" id="6_8g58n"]
 [ext_resource type="Texture2D" uid="uid://cypc6qjvpgd6m" path="res://Map/Decorazioni/AquaLatidritti.png" id="7_acrsq"]
@@ -193,15 +195,18 @@ sources/11 = SubResource("TileSetAtlasSource_qccbb")
 script = ExtResource("1_y6y8x")
 Spawn_location = NodePath("../Entities")
 
-[node name="GameManager" parent="." node_paths=PackedStringArray("ES", "Mazzo", "UI") instance=ExtResource("1_283vf")]
+[node name="GameManager" parent="." node_paths=PackedStringArray("ES", "Mazzo", "UI", "saveload") instance=ExtResource("1_283vf")]
 ES = NodePath("../Spawner")
 Mazzo = NodePath("../DeckManager")
 UI = NodePath("../UI/Ui")
+saveload = NodePath("../SaveLevel")
 
 [node name="DeckManager" type="Node2D" parent="." node_paths=PackedStringArray("nodoui", "nodospawn")]
 script = ExtResource("3_ip5mf")
 nodoui = NodePath("../UI/Ui")
 nodospawn = NodePath("../Entities")
+
+[node name="SaveLevel" parent="." instance=ExtResource("4_21tcy")]
 
 [node name="Area_posizionamento" type="Area2D" parent="."]
 

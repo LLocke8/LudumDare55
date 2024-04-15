@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3s01sr4o4bi4"]
 
-[ext_resource type="Script" path="res://Game_Over/Game_over.gd" id="1_upgvf"]
-[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="2_fta6p"]
-[ext_resource type="Texture2D" uid="uid://gt54kfmnum1h" path="res://background/GameOver.jpg" id="2_ooda4"]
-[ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://fonts/DUNGRG__.TTF" id="4_2n6j5"]
+[ext_resource type="Script" path="res://Scenes/Game_Over/Game_over.gd" id="1_upgvf"]
+[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://font/MedievalSharp-Regular.ttf" id="2_fta6p"]
+[ext_resource type="Texture2D" uid="uid://gt54kfmnum1h" path="res://Scenes/background/GameOver.jpg" id="2_ooda4"]
+[ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://font/DUNGRG__.TTF" id="4_2n6j5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35a4e"]
 bg_color = Color(0, 0, 0, 0.745098)
@@ -92,6 +92,15 @@ layout_mode = 2
 [node name="Separator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="menu_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_2n6j5")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_35a4e")
+text = "Menu"
+
 [node name="retry_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
@@ -99,4 +108,4 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_2n6j5")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_35a4e")
-text = "Retry Again"
+text = "Try Again"

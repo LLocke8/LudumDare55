@@ -7,6 +7,10 @@ extends Node2D
 
 @export var UI : Node
 
+@export var saveload : Node 
+
+@export var current_level = 1
+
 var MaxHPgiocatore : int = 10 :
 	set(Mhp): 
 		MaxHPgiocatore = Mhp 
@@ -66,7 +70,7 @@ var current_turn : int = 0 :
 
 func _ready():
 	ES.Spawn_wave(current_turn)
-	
+	saveload.save_game(current_level)
 
 func prossimo_turno():
 	current_turn+=1

@@ -14,10 +14,9 @@ extends Control
 func _ready():
 	handle_connecting_signals()
 
-	
 func on_start_pressed() -> void:
-	pass
 	#get_tree().change_scene_to_packed(start_level)
+	pass
 
 func on_options_pressed() -> void:
 	margin_container.visible = false
@@ -33,6 +32,7 @@ func on_exit_options_menu() -> void:
 	
 func on_continue_game_pressed() -> void: 
 	pass
+
 
 func handle_connecting_signals() -> void:
 	start_game.button_down.connect(on_start_pressed)
