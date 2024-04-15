@@ -31,7 +31,8 @@ func on_exit_options_menu() -> void:
 	options_menu.visible = false
 	
 func on_continue_game_pressed() -> void: 
-	if()
+	pass
+
 
 func handle_connecting_signals() -> void:
 	start_game.button_down.connect(on_start_pressed)

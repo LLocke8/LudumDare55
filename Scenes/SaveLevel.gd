@@ -7,8 +7,8 @@ func save(level : int):
 	return save_level
 
 func _ready():
-	pass
-	#controlla se esiste il file di salvataggio, se non c'e, chiama save_game(1)
+	if not FileAccess.file_exists("user://savegame.save"):
+		save_game(1)
 
 func save_game(level : int):
 	var save_game = FileAccess.open("user://savegame.save", FileAccess.WRITE)
@@ -24,8 +24,7 @@ func load_game():
 			var json = JSON.new()
 			var parse_result = json.parse(json_string)
 			node_data = json.get_data()
-	else: 
-		save_game(1)
+
 		
 	match node_data["Level"]:
 		1:
