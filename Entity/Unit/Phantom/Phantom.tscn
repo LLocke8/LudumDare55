@@ -29,9 +29,10 @@ radius = 40.0
 script = ExtResource("2_rrha6")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
-speed = 60
-max_hp = 4
-hp = 4
+speed = 120
+max_hp = 10
+hp = 10
+damage_to_opponent = 4
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_o5pce")
@@ -44,6 +45,6 @@ shape = SubResource("RectangleShape2D_yji5j")
 shape = SubResource("CircleShape2D_klu2i")
 
 [node name="Attack" parent="." index="3" instance=ExtResource("4_ilabc")]
-damage = 4
+damage = 5
 attack_speed = 1.0
 shape = SubResource("CircleShape2D_q76vu")

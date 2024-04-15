@@ -20,6 +20,6 @@ func _process(delta):
 func _ready():
 	super()
 	if is_player:
-		attack_node.position += Vector2(80,0)
+		attack_node.position += Vector2(100,0)
 	else:
-		attack_node.position += Vector2(-80,0)
+		attack_node.position += Vector2(-100,0)
