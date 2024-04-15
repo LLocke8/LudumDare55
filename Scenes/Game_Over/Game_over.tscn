@@ -105,6 +105,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_35a4e")
 text = "Menu"
 
 [node name="retry_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
