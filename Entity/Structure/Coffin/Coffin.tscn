@@ -33,9 +33,5 @@ shape = SubResource("RectangleShape2D_nif5h")
 [node name="spawn_time" type="Timer" parent="." index="2"]
 wait_time = 10.0
 
-[node name="health_bar" parent="." index="3"]
-max_value = 3.0
-value = 3.0
-
 [connection signal="ready" from="spawn_time" to="." method="_on_spawn_time_ready"]
 [connection signal="timeout" from="spawn_time" to="." method="_on_spawn_time_timeout"]
