@@ -6,6 +6,7 @@ extends Control
 @export var turn_counter : Node
 @export var deck : Node
 @export var gm : Node
+@export var HPnemico : Node
 
 var lock : bool = false
 
