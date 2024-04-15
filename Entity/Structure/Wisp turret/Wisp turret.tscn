@@ -25,8 +25,8 @@ size = Vector2(270, 70)
 [node name="Wisp Turret" node_paths=PackedStringArray("attack_node") instance=ExtResource("1_8koxj")]
 script = ExtResource("2_4ktx3")
 attack_node = NodePath("Attack")
-max_hp = 20
-hp = 20
+max_hp = 21
+hp = 21
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_v8tni")
