@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Game_Over/Game_over.gd" id="1_upgvf"]
 [ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="2_fta6p"]
-[ext_resource type="Texture2D" uid="uid://dbt3f8qmx7jxk" path="res://background/GameOver1.jpg" id="2_icc1d"]
+[ext_resource type="Texture2D" uid="uid://gt54kfmnum1h" path="res://background/GameOver.jpg" id="2_ooda4"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -18,7 +18,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1, 1.06704)
-texture = ExtResource("2_icc1d")
+texture = ExtResource("2_ooda4")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -79,19 +79,7 @@ layout_mode = 2
 [node name="Separator9" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Separator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Separator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Separator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="Separator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Separator7" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="retry_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
