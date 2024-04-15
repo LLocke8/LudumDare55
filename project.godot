@@ -10,12 +10,12 @@ config_version=5
 
 [application]
 
-config/name="LudumDare55"
+config/name="Aldoria's King"
 config/description="Entry for the Ludum Dare 55 game contest. "
-config/version="v0.0.1"
+config/version="v9.9.9 (edition n9)"
 run/main_scene="res://Scenes/Main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://gicon.png"
 
 [audio]
 

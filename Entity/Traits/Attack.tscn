@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ciu0xt8d5rkf8"]
+[gd_scene load_steps=5 format=3 uid="uid://ciu0xt8d5rkf8"]
 
 [ext_resource type="PackedScene" uid="uid://bqugt8ejy5671" path="res://Entity/Traits/Aggro.tscn" id="1_cb3e0"]
 [ext_resource type="Script" path="res://Entity/Traits/Attack.gd" id="1_ht32l"]
+[ext_resource type="AudioStream" uid="uid://di18ramh1pons" path="res://music/atk_sfx.mp3" id="3_dohlh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0m74p"]
 
@@ -9,11 +10,16 @@
 script = ExtResource("1_ht32l")
 damage = 10
 attack_speed = 2.0
+is_melee = false
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CircleShape2D_0m74p")
 
 [node name="Attack_speed" type="Timer" parent="." index="1"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_dohlh")
+volume_db = -20.0
 
 [connection signal="ready" from="Attack_speed" to="." method="_on_attack_speed_ready"]
 [connection signal="timeout" from="Attack_speed" to="." method="_on_attack_speed_timeout"]

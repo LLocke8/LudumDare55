@@ -1,13 +1,14 @@
-
-[gd_scene load_steps=25 format=3 uid="uid://cod34d8muen7y"]
+[gd_scene load_steps=28 format=3 uid="uid://cod34d8muen7y"]
 
 [ext_resource type="PackedScene" uid="uid://bib0rhkp2hkud" path="res://Sistemi/Game_Manager.tscn" id="1_283vf"]
 [ext_resource type="Script" path="res://Map/Spawner.gd" id="1_y6y8x"]
 [ext_resource type="PackedScene" uid="uid://8ec3stwp4kj6" path="res://Sistemi/UI.tscn" id="2_gdtdr"]
+[ext_resource type="AudioStream" uid="uid://j5ro6w0b6eq4" path="res://music/switch_fase_.mp3" id="3_68h1r"]
 [ext_resource type="Script" path="res://Carte/Deck_Manager.gd" id="3_ip5mf"]
 [ext_resource type="PackedScene" uid="uid://b7l10nfev0lyt" path="res://Map/tile_map.tscn" id="3_islqw"]
 [ext_resource type="PackedScene" uid="uid://bi71harkkxh87" path="res://Scenes/SaveLevel.tscn" id="4_21tcy"]
 [ext_resource type="Texture2D" uid="uid://dkkpt8ofwcvf5" path="res://Map/Tile set Finale.png" id="5_qn1u8"]
+[ext_resource type="AudioStream" uid="uid://bu8t3xerqymc3" path="res://music/placement_.mp3" id="5_ysrsf"]
 [ext_resource type="Texture2D" uid="uid://du17m1c3xl4e" path="res://Map/Tile Set Decorazioni.png" id="6_8g58n"]
 [ext_resource type="Texture2D" uid="uid://cypc6qjvpgd6m" path="res://Map/Decorazioni/AquaLatidritti.png" id="7_acrsq"]
 [ext_resource type="Texture2D" uid="uid://bmdmfo7oejs71" path="res://Map/Decorazioni/decorazioni2.png" id="7_xlnwt"]
@@ -201,10 +202,16 @@ Mazzo = NodePath("../DeckManager")
 UI = NodePath("../UI/Ui")
 saveload = NodePath("../SaveLevel")
 
+[node name="Switch" type="AudioStreamPlayer" parent="GameManager"]
+stream = ExtResource("3_68h1r")
+
 [node name="DeckManager" type="Node2D" parent="." node_paths=PackedStringArray("nodoui", "nodospawn")]
 script = ExtResource("3_ip5mf")
 nodoui = NodePath("../UI/Ui")
 nodospawn = NodePath("../Entities")
+
+[node name="Placement" type="AudioStreamPlayer" parent="DeckManager"]
+stream = ExtResource("5_ysrsf")
 
 [node name="SaveLevel" parent="." instance=ExtResource("4_21tcy")]
 
@@ -242,6 +249,9 @@ layer_0/tile_data = PackedInt32Array(0, 524288, 2, 65536, 524288, 2, 131072, 524
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Entities" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
 
 [connection signal="input_event" from="Area_posizionamento" to="DeckManager" method="_on_area_posizionamento_input_event"]
 [connection signal="body_entered" from="DamageareaP" to="GameManager" method="damagearea_entered"]

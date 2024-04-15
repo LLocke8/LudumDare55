@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://font/DUNGRG__.TTF" id="3_mnovo"]
 [ext_resource type="StyleBox" uid="uid://djguoqrvt4qca" path="res://Scenes/Main_menu/main_menu_styles.tres" id="4_go8j6"]
 [ext_resource type="PackedScene" uid="uid://p8schwksc6gl" path="res://Scenes/Main_menu/Options_menu/options.tscn" id="5_vainc"]
-[ext_resource type="AudioStream" uid="uid://bbk7dm4wgxcd6" path="res://music/prova.mp3" id="6_q6jv0"]
+[ext_resource type="AudioStream" uid="uid://bnok77j3e4bsc" path="res://music/upbeat_ost.mp3" id="7_o2cap"]
 [ext_resource type="PackedScene" uid="uid://bi71harkkxh87" path="res://Scenes/SaveLevel.tscn" id="7_qa40w"]
 
 [node name="Main_menu" type="Control"]
@@ -96,6 +96,7 @@ theme_override_styles/normal = ExtResource("4_go8j6")
 text = "Options"
 
 [node name="Continue_game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
@@ -119,7 +120,7 @@ visible = false
 layout_mode = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_q6jv0")
+stream = ExtResource("7_o2cap")
 volume_db = -14.0
 autoplay = true
 

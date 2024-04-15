@@ -20,8 +20,7 @@ var HPgiocatore : int = 10 :
 	set(hp): 
 		HPgiocatore = hp 
 		if HPgiocatore <= 0:
-			#vai a scena di game over. 
-			pass
+			defeat()
 		elif HPgiocatore > MaxHPgiocatore:
 			HPgiocatore = MaxHPgiocatore
 		UI.HP.text = "HP \n" + str(HPgiocatore) + "/" +str(MaxHPgiocatore)
@@ -40,7 +39,7 @@ var HPnemico : int = 10 :
 			victory()
 		elif HPnemico > MaxHPnemico:
 			HPnemico = MaxHPnemico
-		UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
+		UI.HPnemico.text = "Enemy HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
 
 var turno : bool = 0 : 
 	set(nturno):
@@ -78,6 +77,7 @@ func prossimo_turno():
 
 func prossima_fase():
 	fase = !fase
+	$Switch.play()
 	if fase: #combattimento
 		get_tree().call_group("Entity","on_next_phase",fase)
 		Mazzo.on_next_phase(fase)
@@ -104,9 +104,13 @@ func damagearea_entered(body):
 		body.queue_free()
 
 func victory():
-	pass
-	#cambia livello
+	match current_level:
+		1:
+			get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello2.tscn"))
+		2:
+			get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello3.tscn"))
+		3:
+			get_tree().change_scene_to_packed(load("res://Scenes/Victory/victory.tscn"))
 
 func defeat():
-	pass
-	#porta alla scena di defeat
+	get_tree().change_scene_to_packed(load("res://Scenes/Game_Over/Game_over.tscn"))
