@@ -29,7 +29,7 @@ size = Vector2(175, 40)
 script = ExtResource("2_swggk")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
-speed = 35
+speed = 36
 max_hp = 3
 hp = 3
 
@@ -44,4 +44,5 @@ shape = SubResource("CircleShape2D_m2j4b")
 
 [node name="Attack" parent="." index="3" instance=ExtResource("3_hwobs")]
 damage = 3
+attack_speed = 1.0
 shape = SubResource("RectangleShape2D_y2hbc")

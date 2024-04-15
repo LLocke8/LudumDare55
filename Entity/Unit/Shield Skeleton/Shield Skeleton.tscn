@@ -45,4 +45,5 @@ shape = SubResource("CircleShape2D_bnnxc")
 
 [node name="Attack" parent="." index="3" instance=ExtResource("3_cvvso")]
 damage = 1
+attack_speed = 1.0
 shape = SubResource("CircleShape2D_rpewf")

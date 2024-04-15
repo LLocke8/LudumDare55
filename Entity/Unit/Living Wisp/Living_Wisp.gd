@@ -1,6 +1,6 @@
 extends Unit
 
-class_name Shield_skeleton
+class_name Living_Wisp
 
 @export var aggro_node : Node
 @export var attack_node : Node

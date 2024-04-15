@@ -4,7 +4,7 @@ class_name Spawner
 
 @export var Spawn_location : Node
 
-var Waves = [
+@export var Waves = [
 	{
 	"Skeleton swordman":[Vector2(1000,250),Vector2(1000,230),Vector2(1000,200)],
 	"Skeleton Archer":[Vector2(1000,300)]
@@ -37,5 +37,8 @@ func get_entity_path(unit) -> String:
 		"Tomb" :  return "res://Entity/Structure/Coffin/Coffin.tscn"
 		"Wooden Wall" :  return "res://Entity/Structure/Wall/Wall.tscn"
 		"Soul Turret" :  return "res://Entity/Structure/Wisp turret/Wisp turret.tscn"
+		"Phantom" : return "res://Entity/Unit/Phantom/Phantom.tscn"
+		"Mage Skeleton" : return "res://Entity/Unit/Mage Skeleton/Mage Skeleton.tscn"
+		"Living Armor" : return "res://Entity/Unit/Living Wisp/Living_Wisp.tscn"
 	return "Problem"
 
