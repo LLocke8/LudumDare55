@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3s01sr4o4bi4"]
+[gd_scene load_steps=8 format=3 uid="uid://c3s01sr4o4bi4"]
 
 [ext_resource type="Script" path="res://Scenes/Game_Over/Game_over.gd" id="1_upgvf"]
-[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://font/MedievalSharp-Regular.ttf" id="2_fta6p"]
+[ext_resource type="FontFile" path="res://fonts/MedievalSharp-Regular.ttf" id="2_fta6p"]
 [ext_resource type="PackedScene" uid="uid://bi71harkkxh87" path="res://Scenes/SaveLevel.tscn" id="2_nfvd1"]
 [ext_resource type="Texture2D" uid="uid://gt54kfmnum1h" path="res://Scenes/background/GameOver.jpg" id="2_ooda4"]
-[ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://font/DUNGRG__.TTF" id="4_2n6j5"]
+[ext_resource type="FontFile" path="res://fonts/DUNGRG__.TTF" id="4_2n6j5"]
+[ext_resource type="AudioStream" uid="uid://bnkvrgdyj454g" path="res://music/ost_darker.mp3" id="6_fdx62"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35a4e"]
 bg_color = Color(0, 0, 0, 0.745098)
@@ -113,5 +114,8 @@ theme_override_fonts/font = ExtResource("4_2n6j5")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_35a4e")
 text = "Try Again"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fdx62")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/retry_button" to="SaveLevel" method="load_game"]

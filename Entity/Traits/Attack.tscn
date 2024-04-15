@@ -15,5 +15,7 @@ shape = SubResource("CircleShape2D_0m74p")
 
 [node name="Attack_speed" type="Timer" parent="." index="1"]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+
 [connection signal="ready" from="Attack_speed" to="." method="_on_attack_speed_ready"]
 [connection signal="timeout" from="Attack_speed" to="." method="_on_attack_speed_timeout"]

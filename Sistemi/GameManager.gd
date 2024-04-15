@@ -20,8 +20,7 @@ var HPgiocatore : int = 10 :
 	set(hp): 
 		HPgiocatore = hp 
 		if HPgiocatore <= 0:
-			#vai a scena di game over. 
-			pass
+			defeat()
 		elif HPgiocatore > MaxHPgiocatore:
 			HPgiocatore = MaxHPgiocatore
 		UI.HP.text = "HP \n" + str(HPgiocatore) + "/" +str(MaxHPgiocatore)
@@ -40,7 +39,7 @@ var HPnemico : int = 10 :
 			victory()
 		elif HPnemico > MaxHPnemico:
 			HPnemico = MaxHPnemico
-		UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
+		UI.HPnemico.text = "Enemy HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
 
 var turno : bool = 0 : 
 	set(nturno):
