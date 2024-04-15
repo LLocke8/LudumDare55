@@ -24,13 +24,14 @@ var HPgiocatore : int = 10 :
 			pass
 		elif HPgiocatore > MaxHPgiocatore:
 			HPgiocatore = MaxHPgiocatore
-		UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
+		UI.HP.text = "HP \n" + str(HPgiocatore) + "/" +str(MaxHPgiocatore)
 
 var MaxHPnemico : int = 10 : 
 	set(nhpnem) :
 		MaxHPnemico = nhpnem
 		if HPnemico > MaxHPnemico:
 			HPnemico = MaxHPnemico
+		UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
 
 var HPnemico : int = 10 :
 	set(nhpnem): 
@@ -39,7 +40,7 @@ var HPnemico : int = 10 :
 			victory()
 		elif HPnemico > MaxHPnemico:
 			HPnemico = MaxHPnemico
-		#modifica UI
+		UI.HPnemico.text = "HP \n" + str(HPnemico)  + "/" + str(MaxHPnemico)
 
 var turno : bool = 0 : 
 	set(nturno):
@@ -52,7 +53,7 @@ var turno : bool = 0 :
 		return turno
 		
 
-var fase : bool = 0 #0 per preparazione, 1 per comabttimento
+var fase : bool = 0 #0 per preparazione, 1 per combattimento
 
 var unit_amount : int = 0 :
 	set(namnt):
@@ -60,18 +61,19 @@ var unit_amount : int = 0 :
 		if fase and unit_amount <= 0:
 			prossima_fase()
 
+
 var current_turn : int = 0 :
-	set(nturn):
-		current_turn = nturn 
-		if current_turn >= ES.Waves.size():
-			victory()
+		set(nturn):
+			current_turn = nturn
+			if current_turn >= ES.Waves.size():
+				victory()
 
 func _ready():
 	ES.Spawn_wave(current_turn)
 	saveload.save_game(current_level)
 
 func prossimo_turno():
-	current_turn += 1
+	current_turn+=1
 	turno = !turno
 
 func prossima_fase():

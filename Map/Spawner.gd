@@ -27,7 +27,7 @@ func Spawn_wave(wave : int): #enemy has  EnemyType -> point
 			enemy.global_position = Waves[wave][enemy_type[c]][i] #set the position
 			enemy.is_player = false
 			Spawn_location.add_child.call_deferred(enemy) # spawn the enemy_type at the spawnpoint
-			i= i + 1 # just an increas
+			i= i + 1 # just an increase
 		c= c + 1# just an increase
 
 func get_entity_path(unit) -> String:

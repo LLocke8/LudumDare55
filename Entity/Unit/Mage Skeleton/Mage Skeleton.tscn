@@ -23,7 +23,7 @@ size = Vector2(31, 38)
 radius = 100.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpwp6"]
-size = Vector2(200, 60)
+size = Vector2(230, 65)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vw06h"]
 radius = 65.0
@@ -33,9 +33,10 @@ script = ExtResource("2_lth5v")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
 melee_attack_node = NodePath("Attack2")
-speed = 30
+speed = 60
 max_hp = 5
 hp = 5
+damage_to_opponent = 4
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_vs54v")
@@ -52,8 +53,7 @@ damage = 4
 attack_speed = 1.0
 shape = SubResource("RectangleShape2D_bpwp6")
 
-[node name="Attack2" parent="." index="4" node_paths=PackedStringArray("primary") instance=ExtResource("3_yd0tb")]
+[node name="Attack2" parent="." index="4" instance=ExtResource("3_yd0tb")]
 damage = 2
 attack_speed = 1.0
-primary = NodePath("../Attack")
 shape = SubResource("CircleShape2D_vw06h")
