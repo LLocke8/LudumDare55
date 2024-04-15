@@ -12,12 +12,18 @@ class_name Attack
 		if $attack_speed:
 			$Attack_speed.wait_time = attack_speed 
 
+@export var primary : Node
+
 var can_attack : bool = true
 
 
 func _process(delta):
-	if target != null and !owner.is_stopped:
-		attack()
+	if primary == null:
+		if target != null and !owner.is_stopped:
+			attack()
+	else:
+		if target != null and !owner.is_stopped and primary.target == null:
+			attack()
 
 func attack():
 	if can_attack:
