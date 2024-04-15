@@ -25,8 +25,9 @@ func _physics_process(delta):
 	var movement = move(delta,dir)
 
 func move(delta, direction : Vector2):
-	var movement = direction * delta * speed
-	move_and_collide(movement)
+	if !is_stopped:
+		var movement = direction * delta * speed
+		move_and_collide(movement)
 
 #func _on_hurtbox_body_entered(body):
 	#print(body.name)
@@ -43,3 +44,10 @@ func move(delta, direction : Vector2):
 		#return "down"
 	#if direction.y < 0:
 		#return "up"    
+
+func on_next_phase(phase):
+	if phase: #Combattimento
+		is_stopped = false
+	else: #preparazione
+		queue_free() #despawna 
+

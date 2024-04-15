@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bb4qpasqitdxs"]
 
 [ext_resource type="Texture2D" uid="uid://cdmpfx607481x" path="res://Carte/carta.tres" id="1_bfl8n"]
-[ext_resource type="Script" path="res://Carte/Carta.gd" id="2_yyeo6"]
+[ext_resource type="Script" path="res://Carte/carta.gd" id="1_oq75u"]
 
 [node name="Carta" type="TextureRect"]
 anchors_preset = 15
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_bfl8n")
 stretch_mode = 2
-script = ExtResource("2_yyeo6")
+script = ExtResource("1_oq75u")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

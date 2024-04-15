@@ -3,7 +3,7 @@ extends Node2D
 #riferimento all'enemy spawner
 @export var ES : Node
 #riferimento al mazzo 
-#var Mazzo : Mazzo = ref
+@export var Mazzo : Node
 
 @export var UI : Node
 
@@ -33,32 +33,26 @@ var turno : bool = 0 : #0 per giocatore, 1 per nemico
 	get:
 		return turno
 
-var fase : bool = 0 : #0 per preparazione, 1 per comabttimento
-	set(nfase): prossima_fase(nfase)
-	get:
-		return turno
+var fase : bool = 0 #0 per preparazione, 1 per comabttimento
 
-func _ready():
-	UI = get_tree().get_node("Ui")
+var current_turn : int = 0
 
 func prossimo_turno():
 	turno = !turno
 
-func prossima_fase(nfase):
-	if !fase:
+func prossima_fase():
+	fase = !fase
+	if fase: #combattimento
+		ES.Spawn_wave(turno)
+		get_tree().call_group("Entita","on_next_phase",fase)
+		#impedisci al giocatore di giocare carte
+		Mazzo.on_next_phase(fase)
+	else: #preparazione
 		prossimo_turno()
 		Anime += anime_turno
-	if fase:
+		Mazzo.draw(3)
 		ES.next_wave()
-		#get_tree().call_group("Entita","Start") (sofferenza)
-		#impedisci al giocatore di giocare carte
-		#Mazzo.lock()
-		pass
-	else:
-		#rimuovi le unita non persistenti che rimangono
-		#get_tree().call_group("Entita","Kill") (piu sofferenza)
-		pass
-	fase = nfase 
+		get_tree().call_group("Entita","on_next_phase",fase)
 
 func set_MaxHPgiocatore(Mhp):
 	MaxHPgiocatore = Mhp 

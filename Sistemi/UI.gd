@@ -1,16 +1,11 @@
 extends Control
 
-var Panello_Carte : Node
-var Mana : Node
-var HP : Node
-var Start : Node
-var turn_counter : Node
+@export var Mana : Node
+@export var HP : Node
+@export var Start : Node
+@export var turn_counter : Node
+@export var deck : Node
+@export var gm : Node
 
-func _ready():
-	Panello_Carte = $VBoxContainer/Panello_inferiore/HBoxContainer/Carte
-	Mana = $VBoxContainer/Panello_inferiore/HBoxContainer/TextureRect/Mana
-	HP = $VBoxContainer/Panello_inferiore/HBoxContainer/TextureRect2/HP
-	Start = $VBoxContainer/Panello_inferiore/HBoxContainer/Start
-	turn_counter = $"VBoxContainer/Panello_superiore/VBoxContainer/Turn Counter"
-	
-
+func _on_start_pressed():
+	gm.prossima_fase()
