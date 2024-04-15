@@ -71,6 +71,7 @@ alignment = 2
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panello_inferiore/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -84,6 +85,7 @@ size_flags_vertical = 4
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panello_inferiore/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 0
 texture = ExtResource("3_6nc0u")
 expand_mode = 2
 
@@ -101,10 +103,11 @@ offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Mana:
-0/5"
+5"
 
 [node name="TextureRect2" type="TextureRect" parent="VBoxContainer/Panello_inferiore/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("4_ksp7j")
 expand_mode = 2
 
@@ -122,7 +125,7 @@ offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "HP
-0/5"
+10/10"
 
 [node name="Start" type="TextureButton" parent="VBoxContainer/Panello_inferiore/HBoxContainer"]
 layout_mode = 2

@@ -8,22 +8,36 @@ extends Node2D
 @export var UI : Node
 
 var MaxHPgiocatore : int = 10 :
-	set(Mhp): set_MaxHPgiocatore(Mhp)
-var HPgiocatore : int = 10 : 
-	set(hp): set_hp(hp)
+	set(Mhp): 
+		MaxHPgiocatore = Mhp 
+		UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
 
-#var Maxanime : int = 5 :
-	#set(maxa): set_Maxanime(maxa)
-var Anime : int = 5 :
-	set(nanime): set_anime(nanime)
-var anime_turno : int = 5 
+var HPgiocatore : int = 10 : 
+	set(hp): 
+		HPgiocatore = hp 
+		if HPgiocatore <= 0:
+			#vai a scena di game over. 
+			pass
+		elif HPgiocatore > MaxHPgiocatore:
+			HPgiocatore = MaxHPgiocatore
+		UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
 
 var MaxHPnemico : int = 10 : 
-	set(nmaxhpn) : set_MaxHPnemico(nmaxhpn)
-var HPnemico : int = 10 :
-	set(nhpnem) : set_HPnemico(nhpnem)
+	set(nmaxhpn): 
+		HPnemico = nmaxhpn 
+		if HPnemico <= 0:
+			#vai a scena di vittoria/al prossimo livello. 
+			pass
+		elif HPnemico > MaxHPnemico:
+			HPnemico = MaxHPnemico
+		#modifica UI
 
-var turno : bool = 0 : #0 per giocatore, 1 per nemico
+var HPnemico : int = 10 :
+	set(nhpnem) :
+		HPnemico = nhpnem
+		#Aggiorna UI
+
+var turno : bool = 0 : 
 	set(nturno):
 		if turno:
 			pass
@@ -35,7 +49,17 @@ var turno : bool = 0 : #0 per giocatore, 1 per nemico
 
 var fase : bool = 0 #0 per preparazione, 1 per comabttimento
 
+var unit_amount : int = 0 :
+	set(namnt):
+		unit_amount = namnt
+		if fase and unit_amount < 0:
+			prossima_fase()
+
 var current_turn : int = 0
+
+func _ready():
+	ES.Spawn_wave(turno)
+	current_turn += 1
 
 func prossimo_turno():
 	turno = !turno
@@ -43,58 +67,25 @@ func prossimo_turno():
 func prossima_fase():
 	fase = !fase
 	if fase: #combattimento
-		ES.Spawn_wave(turno)
-		get_tree().call_group("Entita","on_next_phase",fase)
-		#impedisci al giocatore di giocare carte
+		get_tree().call_group("Entity","on_next_phase",fase)
 		Mazzo.on_next_phase(fase)
+		UI.lock = true
 	else: #preparazione
+		ES.Spawn_wave(turno)
 		prossimo_turno()
-		Anime += anime_turno
 		Mazzo.draw(3)
-		ES.next_wave()
-		get_tree().call_group("Entita","on_next_phase",fase)
-
-func set_MaxHPgiocatore(Mhp):
-	MaxHPgiocatore = Mhp 
-	UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
-
-func set_hp(hp):
-	HPgiocatore = hp 
-	if HPgiocatore <= 0:
-		#vai a scena di game over. 
-		pass
-	elif HPgiocatore > MaxHPgiocatore:
-		HPgiocatore = MaxHPgiocatore
-	UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
+		get_tree().call_group("Entity","on_next_phase",fase)
+		UI.lock = false
 
 #func set_Maxanime(maxa):
 	#Maxanime = maxa
 	#UI.Mana.text = "Mana \n" + str(Anime) + str(Maxanime)
 
-func set_anime(nanime):
-	Anime = nanime
-	#if Anime > Maxanime:
-		#Anime = Maxanime
-	UI.Mana.text = "Mana \n" + str(Anime)
-
-func set_MaxHPnemico(nmaxhpn):
-	HPnemico = nmaxhpn 
-	if HPnemico <= 0:
-		#vai a scena di vittoria/al prossimo livello. 
-		pass
-	elif HPnemico > MaxHPnemico:
-		HPnemico = MaxHPnemico
-	#modifica UI
-
-func set_HPnemico(nhpnem):
-	HPnemico = nhpnem
-	#Aggiorna UI
-
 func damagearea_entered(body):
 	#contralla se e un entita
 	if body is Entity:
 	#controlla a chi appartiene
-		if body.is_player == 1: 
+		if body.is_player == true: 
 			HPgiocatore -= body.damage_to_opponent #cambia il valore in base agli HP o a qualcos'altro 
 		else:
 			HPnemico -= body.damage_to_opponent

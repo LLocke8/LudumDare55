@@ -12,6 +12,19 @@ var CartaSelezionata : Node
 @export var nodoui : Node
 @export var nodospawn : Node
 
+
+#var Maxanime : int = 5 :
+	#set(maxa): set_Maxanime(maxa)
+var Anime : int = 5 :
+	set(nanime): 
+		Anime = nanime
+		#if Anime > Maxanime:
+			#Anime = Maxanime
+		nodoui.Mana.text = "Mana \n" + str(Anime)
+
+
+var anime_turno : int = 5 
+
 func _ready():
 	deck.assign(STARTING_DECK)
 	deck.shuffle()
@@ -40,14 +53,22 @@ func selected(carta : Node):
 	CartaSelezionata = carta
 
 func play_selected(pos):
-	CartaSelezionata.play_card(pos)
+	if CartaSelezionata.costo <= Anime:
+		Anime -= CartaSelezionata.costo
+		CartaSelezionata.play_card(pos)
+		CartaSelezionata = null
+	else:
+		pass
+		#non hai abbastanza anime
 
 func on_next_phase(phase):
 	for card in nodoui.deck.get_children():
 		card.is_locked = phase 
+	if !phase:
+		Anime += anime_turno
 
 func _on_area_posizionamento_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("leftclick"):
+	if event is InputEventMouseButton && event.pressed:
 		if CartaSelezionata != null:
 			play_selected(get_global_mouse_position())
 		

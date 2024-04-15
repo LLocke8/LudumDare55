@@ -30,6 +30,7 @@ func Spawn_wave(wave : int): #enemy has  EnemyTipe -> point
 			var enemy_scene = load(get_entity_path(enemy_type[c])) #Load the specific enemy
 			var enemy = enemy_scene.instantiate()# instantiate it
 			enemy.global_position = Waves[wave][enemy_type[c]][i] #set the position
+			enemy.is_player = false
 			Spawn_location.add_child(enemy) # spawn the enemy_type at the spawnpoint
 			i= i + 1 # just an increas
 		c= c + 1# just an increase

@@ -2,6 +2,7 @@ extends Node
 
 #informazioni unita' = [tipo,costo,hp,immagine,descrizione,scena,scena_unita]
 const DATA = {
+
 	'Skeleton swordman' :
 		['',1, 7, "res://Carte/Sprite Carte/Carta Spada.png", "","res://Carte/Carta.tscn","res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn"],
 	'Skeleton Archer' :
@@ -25,7 +26,7 @@ const DATA = {
 	'Soul Turret' :
 		['',2, 10, "res://Carte/Sprite Carte/Soulturret.png", 'Lasts until it gets destroyed. Shoots magical fire as projectiles. Can hit ghosts.', "res://Carte/carta.tscn","res://Entity/Structure/Wisp turret/Wisp turret.tscn"]
 		
-		
+
 }
 
 
