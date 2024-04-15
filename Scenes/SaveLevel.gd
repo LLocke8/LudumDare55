@@ -24,6 +24,8 @@ func load_game():
 			var json = JSON.new()
 			var parse_result = json.parse(json_string)
 			node_data = json.get_data()
+	else: 
+		save_game(1)
 		
 	match node_data["Level"]:
 		1:
