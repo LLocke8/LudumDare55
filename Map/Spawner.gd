@@ -6,9 +6,12 @@ class_name Spawner
 
 @export var Waves = [
 	{
-	"Skeleton swordman":[Vector2(1000,250),Vector2(1000,230),Vector2(1000,200)],
-	"Skeleton Archer":[Vector2(1000,300)]
-	},
+	"Skeleton Archer":[Vector2(1000,300)],
+	"Tomb":[Vector2(1000,200)],
+	"Wooden Wall":[Vector2(950,200)]
+	}, {
+	"Skeleton swordman":[Vector2(1000,300)],
+	}
 	]
 
 # Called when the node enters the scene tree for the first time.
