@@ -15,7 +15,7 @@ var CartaSelezionata : Node
 
 #var Maxanime : int = 5 :
 	#set(maxa): set_Maxanime(maxa)
-var Anime : int = 5 :
+var Anime : int = 20 :
 	set(nanime): 
 		Anime = nanime
 		#if Anime > Maxanime:
@@ -65,6 +65,7 @@ func on_next_phase(phase):
 	for card in nodoui.deck.get_children():
 		card.is_locked = phase 
 	if !phase:
+		draw(3)
 		Anime += anime_turno
 
 func _on_area_posizionamento_input_event(viewport, event, shape_idx):

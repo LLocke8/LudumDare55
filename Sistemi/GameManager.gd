@@ -48,24 +48,27 @@ var turno : bool = 0 :
 		return turno
 		
 
-var fase : bool = 0 #0 per preparazione, 1 per comabttimento
+var fase : bool = 0 #0 per preparazione, 1 per combattimento
 
 var unit_amount : int = 0 :
 	set(namnt):
 		unit_amount = namnt
-		if fase and unit_amount < 0:
+		if fase and unit_amount <= 0:
 			prossima_fase()
 		print(unit_amount)
 
-var current_turn : int = 0
+var current_turn : int = 0 :
+		set(nturn):
+			current_turn = nturn
+			if current_turn >= ES.Waves.size():
+				victory()
 
 func _ready():
-	ES.Spawn_wave(turno)
-	current_turn += 1
-	if current_turn > ES.Waves.size():
-		victory()
+	ES.Spawn_wave(current_turn)
+	
 
 func prossimo_turno():
+	current_turn+=1
 	turno = !turno
 
 func prossima_fase():
@@ -75,10 +78,10 @@ func prossima_fase():
 		Mazzo.on_next_phase(fase)
 		UI.lock = true
 	else: #preparazione
-		ES.Spawn_wave(turno)
 		prossimo_turno()
-		Mazzo.draw(3)
+		Mazzo.on_next_phase(fase)
 		get_tree().call_group("Entity","on_next_phase",fase)
+		ES.Spawn_wave(current_turn-1)
 		UI.lock = false
 
 #func set_Maxanime(maxa):
