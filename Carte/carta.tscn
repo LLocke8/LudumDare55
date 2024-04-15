@@ -1,38 +1,57 @@
 [gd_scene load_steps=4 format=3 uid="uid://bb4qpasqitdxs"]
 
-[ext_resource type="Script" path="res://Carte/carta.gd" id="1_oq75u"]
+[ext_resource type="Texture2D" uid="uid://dapmctq1ly4yn" path="res://Carte/Sprite Carte/Carta Bullone.png" id="1_e3b37"]
+[ext_resource type="Script" path="res://Carte/Carta.gd" id="2_yyeo6"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_puoy5"]
-load_path = "res://.godot/imported/ScheletroSpada.png-371ce407505c482c579ee909d87ffae6.ctex"
+[sub_resource type="FontFile" id="FontFile_t5f76"]
+cache/0/9/0/ascent = 0.0
+cache/0/9/0/descent = 0.0
+cache/0/9/0/underline_position = 0.0
+cache/0/9/0/underline_thickness = 0.0
+cache/0/9/0/scale = 1.0
+cache/0/9/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/10/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/12/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/12/0 = Vector2(0, 0)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5nl65"]
-load_path = "res://.godot/imported/Bordo.png-8097e12ce3899bd10fea925625bc5a8c.ctex"
-
-[node name="Carta" type="Control"]
-layout_mode = 3
+[node name="Carta" type="TextureRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_oq75u")
+texture = ExtResource("1_e3b37")
+stretch_mode = 2
+script = ExtResource("2_yyeo6")
 
-[node name="Immagine" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 16.0
-offset_right = 43.0
-offset_bottom = 55.0
-texture = SubResource("CompressedTexture2D_puoy5")
-expand_mode = 1
-
-[node name="Carta" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 48.0
-offset_bottom = 84.0
-texture = SubResource("CompressedTexture2D_5nl65")
-
-[node name="Button" type="Button" parent="Carta"]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,7 +62,40 @@ flat = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 4.0
-offset_top = -2.0
-offset_right = 44.0
-offset_bottom = 21.0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 75.0
+offset_bottom = 28.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_t5f76")
+theme_override_font_sizes/font_size = 9
+text = "Bullone"
+
+[node name="HP" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 57.0
+offset_right = 39.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0.992157, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "50"
+
+[node name="Mana" type="Label" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 60.0
+offset_right = 86.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0, 0.290196, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "7"
+metadata/_edit_group_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

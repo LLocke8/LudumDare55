@@ -16,7 +16,7 @@ var can_attack : bool = true
 
 
 func _process(delta):
-	if target != null:
+	if target != null and !owner.is_stopped:
 		attack()
 
 func attack():

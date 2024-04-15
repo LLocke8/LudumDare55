@@ -11,3 +11,5 @@ base_dir = Vector2(0, 0)
 dir = Vector2(0, 0)
 
 [node name="Aggro" parent="." index="2" instance=ExtResource("3_voqnu")]
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

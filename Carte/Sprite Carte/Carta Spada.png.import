@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsyatjfjk6sqw"
-path="res://.godot/imported/StartButton.png-3afab8da5398178e2caeb43732ad3ccb.ctex"
+uid="uid://ddguehjk5pdwd"
+path="res://.godot/imported/Carta Spada.png-869c3d4db22aac83921e3aaa84ab546a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sistemi/StartButton.png"
-dest_files=["res://.godot/imported/StartButton.png-3afab8da5398178e2caeb43732ad3ccb.ctex"]
+source_file="res://Carte/Sprite Carte/Carta Spada.png"
+dest_files=["res://.godot/imported/Carta Spada.png-869c3d4db22aac83921e3aaa84ab546a.ctex"]
 
 [params]
 
