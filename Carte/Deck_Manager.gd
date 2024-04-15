@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var CardData = load("res://Carte/CardData.gd")
 
-@export var STARTING_DECK = ["ScheletroSpada","ScheletroSpada","ScheletroSpada","ScheletroArco","ScheletroArco",'ScheletroScudo','ScheletroScudo']
+@export var STARTING_DECK = ['Skeleton swordman','Skeleton swordman','Skeleton swordman','Skeleton Archer','Skeleton Archer','Tank Skeleton','Tank Skeleton']
 const DRAW_AMOUNT = 3
 
 var deck = []

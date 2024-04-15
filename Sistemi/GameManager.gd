@@ -10,7 +10,7 @@ extends Node2D
 var MaxHPgiocatore : int = 10 :
 	set(Mhp): 
 		MaxHPgiocatore = Mhp 
-		UI.HP.text = "HP \n" + str(HPgiocatore) + str(MaxHPgiocatore)
+		UI.HP.text = "HP \n" + str(HPgiocatore)  + "/" + str(MaxHPgiocatore)
 
 var HPgiocatore : int = 10 : 
 	set(hp): 
@@ -85,7 +85,7 @@ func damagearea_entered(body):
 	#contralla se e un entita
 	if body is Entity:
 	#controlla a chi appartiene
-		if body.is_player == true: 
+		if body.is_player == false: 
 			HPgiocatore -= body.damage_to_opponent #cambia il valore in base agli HP o a qualcos'altro 
 		else:
 			HPnemico -= body.damage_to_opponent

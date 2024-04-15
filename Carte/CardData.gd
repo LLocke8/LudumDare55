@@ -21,7 +21,7 @@ const DATA = {
 		['',3, 0, "res://Carte/Sprite Carte/Carta Spear.png", 'Inflicts 5 damage to the enemy commander',"res://Carte/Carta.gd",''],
 	'Tomb' :
 		['',3, 3, "res://Carte/Sprite Carte/Coffin.png", 'It lasts until it has hp remaining. Loses 1hp per turn, summon up to 4 skeleton swordman each tun, 1 every 15s',"res://Carte/carta.tscn","res://Entity/Structure/Coffin/Coffin.tscn",],
-	'Spikes' :
+	'Wooden Wall' :
 		['',1, 20, "res://Carte/Sprite Carte/wall.png", 'Lasts until it gets destroyed. Nothing particular, blocks enemies and damage, what did you expect.', "res://Carte/carta.tscn","res://Entity/Structure/Wall/Wall.tscn"],
 	'Soul Turret' :
 		['',2, 10, "res://Carte/Sprite Carte/Soulturret.png", 'Lasts until it gets destroyed. Shoots magical fire as projectiles. Can hit ghosts.', "res://Carte/carta.tscn","res://Entity/Structure/Wisp turret/Wisp turret.tscn"]

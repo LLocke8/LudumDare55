@@ -1,20 +1,14 @@
 extends Node2D
 
-
 class_name Spawner
 
 @export var Spawn_location : Node
 
 var Waves = [
 	{
-	"Scheletro Spada":[Vector2(1000,250),Vector2(1000,230),Vector2(1000,200)],
-	"Scheletro Arco":[Vector2(1000,300)]
+	"Skeleton swordman":[Vector2(1000,250),Vector2(1000,230),Vector2(1000,200)],
+	"Skeleton Archer":[Vector2(1000,300)]
 	},
-	{
-		"Scheletro Arco":[Vector2(10,10)], 
-		"Scheletro Spada":[Vector2(10,10)],
-		"Scheletro Scudo":[Vector2(10,10)]
-	}
 	]
 
 # Called when the node enters the scene tree for the first time.
@@ -37,11 +31,11 @@ func Spawn_wave(wave : int): #enemy has  EnemyTipe -> point
 
 func get_entity_path(unit) -> String:
 	match unit:
-		"Scheletro Scudo" : return "res://Entity/Unit/Shield Skeleton/Shield Skeleton.tscn"
-		"Scheletro Arco" :  return "res://Entity/Unit/Skeleton Archer/Skeleton Archer.tscn"
-		"Scheletro Spada" :  return "res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn"
-		"Coffin" :  return "res://Entity/Structure/Coffin/Coffin.tscn"
-		"Wall" :  return "res://Entity/Structure/Wall/Wall.tscn"
-		"Torretta Scheletro" :  return "res://Entity/Structure/Wisp turret/Wisp turret.tscn"
+		"Tank Skeleton" : return "res://Entity/Unit/Shield Skeleton/Shield Skeleton.tscn"
+		"Skeleton Archer" :  return "res://Entity/Unit/Skeleton Archer/Skeleton Archer.tscn"
+		"Skeleton swordman" :  return "res://Entity/Unit/Sword Skeleton/Sword_Skeleton.tscn"
+		"Tomb" :  return "res://Entity/Structure/Coffin/Coffin.tscn"
+		"Wooden Wall" :  return "res://Entity/Structure/Wall/Wall.tscn"
+		"Soul Turret" :  return "res://Entity/Structure/Wisp turret/Wisp turret.tscn"
 	return "Problem"
 
