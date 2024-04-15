@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsyatjfjk6sqw"
-path="res://.godot/imported/StartButton.png-3afab8da5398178e2caeb43732ad3ccb.ctex"
+uid="uid://b4t5bc8fytvx"
+path="res://.godot/imported/Coffin.png-c069ab9fa561f7b20e492148d2789a54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sistemi/StartButton.png"
-dest_files=["res://.godot/imported/StartButton.png-3afab8da5398178e2caeb43732ad3ccb.ctex"]
+source_file="res://Carte/Sprite Carte/Coffin.png"
+dest_files=["res://.godot/imported/Coffin.png-c069ab9fa561f7b20e492148d2789a54.ctex"]
 
 [params]
 

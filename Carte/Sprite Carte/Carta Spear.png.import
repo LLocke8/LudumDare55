@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsyatjfjk6sqw"
-path="res://.godot/imported/StartButton.png-3afab8da5398178e2caeb43732ad3ccb.ctex"
+uid="uid://rfco5vuxn1ly"
+path="res://.godot/imported/Carta Spear.png-50f374560c098754e418fa7eacfbc1af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sistemi/StartButton.png"
-dest_files=["res://.godot/imported/StartButton.png-3afab8da5398178e2caeb43732ad3ccb.ctex"]
+source_file="res://Carte/Sprite Carte/Carta Spear.png"
+dest_files=["res://.godot/imported/Carta Spear.png-50f374560c098754e418fa7eacfbc1af.ctex"]
 
 [params]
 
