@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://5sfooy35lit0"]
+
+[ext_resource type="PackedScene" uid="uid://dx7fd761jhhkb" path="res://Entity/Structure/Structure.tscn" id="1_pn468"]
+[ext_resource type="Script" path="res://Entity/Structure/Coffin/Coffin.gd" id="2_j38a1"]
+[ext_resource type="Texture2D" uid="uid://b6vbqeo10hlci" path="res://Entity/Structure/Coffin/Coffin.png" id="3_jyhcl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d852p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jyhcl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nif5h"]
+size = Vector2(48, 48)
+
+[node name="Coffin" instance=ExtResource("1_pn468")]
+script = ExtResource("2_j38a1")
+spawn_time = 15.0
+max_hp = 3
+hp = 3
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_d852p")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_nif5h")
+
+[node name="spawn_time" type="Timer" parent="." index="2"]
+wait_time = 10.0
+
+[connection signal="ready" from="spawn_time" to="." method="_on_spawn_time_ready"]
+[connection signal="timeout" from="spawn_time" to="." method="_on_spawn_time_timeout"]

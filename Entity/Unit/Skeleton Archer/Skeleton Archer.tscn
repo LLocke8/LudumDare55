@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://dxp670ket68sq"]
+
+[ext_resource type="PackedScene" uid="uid://dbqk4unb757py" path="res://Entity/Unit/Unit.tscn" id="1_p7uyb"]
+[ext_resource type="Script" path="res://Entity/Unit/Skeleton Archer/Skeleton Archer.gd" id="2_swggk"]
+[ext_resource type="PackedScene" uid="uid://ciu0xt8d5rkf8" path="res://Entity/Traits/Attack.tscn" id="3_hwobs"]
+[ext_resource type="Texture2D" uid="uid://del45b6jp75j" path="res://Entity/Unit/Skeleton Archer/Scheletro Arco.png" id="3_lxisk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_as7wa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lxisk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hajtb"]
+size = Vector2(24, 48)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m2j4b"]
+radius = 100.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2hbc"]
+size = Vector2(200, 60)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qbk2o"]
+radius = 65.0
+
+[node name="Skeleton Archer" node_paths=PackedStringArray("aggro_node", "attack_node", "melee_attack_node") instance=ExtResource("1_p7uyb")]
+script = ExtResource("2_swggk")
+aggro_node = NodePath("Aggro")
+attack_node = NodePath("Attack")
+melee_attack_node = NodePath("Attack2")
+speed = 36
+max_hp = 3
+hp = 3
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_as7wa")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_hajtb")
+
+[node name="Aggro" parent="." index="2"]
+shape = SubResource("CircleShape2D_m2j4b")
+
+[node name="Attack" parent="." index="3" instance=ExtResource("3_hwobs")]
+damage = 3
+attack_speed = 1.0
+shape = SubResource("RectangleShape2D_y2hbc")
+
+[node name="Attack2" parent="." index="4" node_paths=PackedStringArray("primary") instance=ExtResource("3_hwobs")]
+damage = 1
+attack_speed = 1.0
+primary = NodePath("../Attack")
+shape = SubResource("CircleShape2D_qbk2o")
