@@ -8,7 +8,7 @@
 position = Vector2(-106, 78)
 Waves = [{
 "Living Armor": [Vector2(1200, 500)],
-"Skeleton Archer": [Vector2(1274, 250), Vector2(1270, 450)],
+"Skeleton Archer": [Vector2(1274, 90), Vector2(1270, 450)],
 "Skeleton swordman": [Vector2(1100, 80), Vector2(1110, 90), Vector2(1110, 100)],
 "Soul Turret": [Vector2(1210, 350)],
 "Wooden Wall": [Vector2(1200, 350)]

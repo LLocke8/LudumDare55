@@ -81,7 +81,7 @@ func prossima_fase():
 		prossimo_turno()
 		Mazzo.on_next_phase(fase)
 		get_tree().call_group("Entity","on_next_phase",fase)
-		ES.Spawn_wave(current_turn-1)
+		ES.Spawn_wave(current_turn)
 		UI.lock = false
 
 #func set_Maxanime(maxa):

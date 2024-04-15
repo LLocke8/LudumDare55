@@ -12,7 +12,7 @@ const DATA = {
 	'Phantom':
 		['',3, 4, "res://Carte/Sprite Carte/Carta Phantom.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Phantom/Phantom.tscn"],
 	'Living Armor':
-		['',7, 50, "res://Carte/Sprite Carte/Carta Bullone.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Living Wisp/Living_Wisp.tscn"],
+		['',7, 80, "res://Carte/Sprite Carte/Carta Bullone.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Living Wisp/Living_Wisp.tscn"],
 	'Sorcerer':
 		['',3, 5, "res://Carte/Sprite Carte/Carta Sorcerer.png",'',"res://Carte/carta.tscn","res://Entity/Unit/Mage Skeleton/Mage Skeleton.tscn"],
 	'Heal' :
