@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://blxv2nh2d61c4"]
+[gd_scene load_steps=8 format=3 uid="uid://blxv2nh2d61c4"]
 
-[ext_resource type="Script" path="res://Main_menu/main_menu.gd" id="1_kklfb"]
-[ext_resource type="Texture2D" uid="uid://bxir633ng4opu" path="res://background/background.jpg" id="2_cvjwr"]
-[ext_resource type="PackedScene" uid="uid://p8schwksc6gl" path="res://Main_menu/Options_menu/options.tscn" id="3_ouuwk"]
-[ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://fonts/DUNGRG__.TTF" id="4_5yl21"]
-[ext_resource type="AudioStream" uid="uid://bbk7dm4wgxcd6" path="res://music/prova.mp3" id="4_6c2ri"]
-[ext_resource type="StyleBox" uid="uid://djguoqrvt4qca" path="res://Main_menu/main_menu_styles.tres" id="4_mnp02"]
+[ext_resource type="Script" path="res://Scenes/Main_menu/main_menu.gd" id="1_16nhh"]
+[ext_resource type="Texture2D" uid="uid://bxir633ng4opu" path="res://Scenes/background/background.jpg" id="2_agv0n"]
+[ext_resource type="FontFile" uid="uid://cdsdtlmt48u4i" path="res://font/DUNGRG__.TTF" id="3_mnovo"]
+[ext_resource type="StyleBox" uid="uid://djguoqrvt4qca" path="res://Scenes/Main_menu/main_menu_styles.tres" id="4_go8j6"]
+[ext_resource type="PackedScene" uid="uid://p8schwksc6gl" path="res://Scenes/Main_menu/Options_menu/options.tscn" id="5_vainc"]
+[ext_resource type="AudioStream" uid="uid://bbk7dm4wgxcd6" path="res://music/prova.mp3" id="6_q6jv0"]
+[ext_resource type="PackedScene" uid="uid://bi71harkkxh87" path="res://Scenes/SaveLevel.tscn" id="7_qa40w"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -15,7 +16,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1.01034)
-script = ExtResource("1_kklfb")
+script = ExtResource("1_16nhh")
+
+[node name="SaveLevel" parent="." instance=ExtResource("7_qa40w")]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -25,7 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.99997, 1.01194)
-texture = ExtResource("2_cvjwr")
+texture = ExtResource("2_agv0n")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -53,7 +56,7 @@ stretch_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_5yl21")
+theme_override_fonts/font = ExtResource("3_mnovo")
 theme_override_font_sizes/font_size = 100
 text = "Aldoria's King"
 horizontal_alignment = 1
@@ -78,27 +81,27 @@ layout_mode = 2
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
-theme_override_fonts/font = ExtResource("4_5yl21")
+theme_override_fonts/font = ExtResource("3_mnovo")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("4_mnp02")
-text = "Start Game"
+theme_override_styles/normal = ExtResource("4_go8j6")
+text = "New Game"
 
 [node name="Options" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
-theme_override_fonts/font = ExtResource("4_5yl21")
+theme_override_fonts/font = ExtResource("3_mnovo")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("4_mnp02")
+theme_override_styles/normal = ExtResource("4_go8j6")
 text = "Options"
 
 [node name="Continue_game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
-theme_override_fonts/font = ExtResource("4_5yl21")
+theme_override_fonts/font = ExtResource("3_mnovo")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("4_mnp02")
+theme_override_styles/normal = ExtResource("4_go8j6")
 text = "Continue"
 
 [node name="Exit_game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -106,16 +109,18 @@ custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
 theme_override_colors/font_hover_color = Color(0.705882, 0.0862745, 0.176471, 1)
-theme_override_fonts/font = ExtResource("4_5yl21")
+theme_override_fonts/font = ExtResource("3_mnovo")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("4_mnp02")
+theme_override_styles/normal = ExtResource("4_go8j6")
 text = "Exit Game"
 
-[node name="Options_menu" parent="." instance=ExtResource("3_ouuwk")]
+[node name="Options_menu" parent="." instance=ExtResource("5_vainc")]
 visible = false
 layout_mode = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_6c2ri")
+stream = ExtResource("6_q6jv0")
 volume_db = -14.0
 autoplay = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Continue_game" to="SaveLevel" method="load_game"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cod34d8muen7y"]
+[gd_scene load_steps=9 format=3 uid="uid://cod34d8muen7y"]
 
 [ext_resource type="PackedScene" uid="uid://bib0rhkp2hkud" path="res://Sistemi/Game_Manager.tscn" id="1_283vf"]
 [ext_resource type="Script" path="res://Map/Spawner.gd" id="1_y6y8x"]
 [ext_resource type="PackedScene" uid="uid://8ec3stwp4kj6" path="res://Sistemi/UI.tscn" id="2_gdtdr"]
 [ext_resource type="Script" path="res://Carte/Deck_Manager.gd" id="3_ip5mf"]
 [ext_resource type="PackedScene" uid="uid://b7l10nfev0lyt" path="res://Map/tile_map.tscn" id="3_islqw"]
+[ext_resource type="PackedScene" uid="uid://bi71harkkxh87" path="res://Scenes/SaveLevel.tscn" id="4_21tcy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kruxo"]
 size = Vector2(242.5, 720)
@@ -18,15 +19,18 @@ size = Vector2(40, 720)
 script = ExtResource("1_y6y8x")
 Spawn_location = NodePath("../Entities")
 
-[node name="GameManager" parent="." node_paths=PackedStringArray("ES", "Mazzo", "UI") instance=ExtResource("1_283vf")]
+[node name="GameManager" parent="." node_paths=PackedStringArray("ES", "Mazzo", "UI", "saveload") instance=ExtResource("1_283vf")]
 ES = NodePath("../Spawner")
 Mazzo = NodePath("../DeckManager")
 UI = NodePath("../UI/Ui")
+saveload = NodePath("../SaveLevel")
 
 [node name="DeckManager" type="Node2D" parent="." node_paths=PackedStringArray("nodoui", "nodospawn")]
 script = ExtResource("3_ip5mf")
 nodoui = NodePath("../UI/Ui")
 nodospawn = NodePath("../Entities")
+
+[node name="SaveLevel" parent="." instance=ExtResource("4_21tcy")]
 
 [node name="Area_posizionamento" type="Area2D" parent="."]
 

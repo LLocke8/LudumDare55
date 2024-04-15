@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://p8schwksc6gl"]
 
-[ext_resource type="Script" path="res://Main_menu/Options_menu/options.gd" id="1_sh8c8"]
-[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://fonts/MedievalSharp-Regular.ttf" id="2_5u6ix"]
-[ext_resource type="PackedScene" uid="uid://b2f36b427o4ml" path="res://Main_menu/Options_menu/settings_tab_container.tscn" id="2_vpx5y"]
+[ext_resource type="Script" path="res://Scenes/Main_menu/Options_menu/options.gd" id="1_sh8c8"]
+[ext_resource type="FontFile" uid="uid://0v3d77ny1nbj" path="res://font/MedievalSharp-Regular.ttf" id="2_5u6ix"]
+[ext_resource type="PackedScene" uid="uid://b2f36b427o4ml" path="res://Scenes/Main_menu/Options_menu/settings_tab_container.tscn" id="2_vpx5y"]
 
 [sub_resource type="SystemFont" id="SystemFont_hwijd"]
 font_names = PackedStringArray("Impact")

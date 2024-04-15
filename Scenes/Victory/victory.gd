@@ -3,7 +3,7 @@ extends Control
 class_name Victory
 
 @onready var victory_button = $MarginContainer/HBoxContainer/VBoxContainer/victory_button as Button
-@onready var main_menu = preload("res://Main_menu/main_menu.tscn")
+@onready var main_menu = preload("res://Scenes/Main_menu/main_menu.tscn")
 
 
 func _ready():

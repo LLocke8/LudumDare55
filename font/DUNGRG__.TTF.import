@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ikhvoiq42pmf"
-path="res://.godot/imported/The Lost Dungeon.ttf-157a2bd486f365d714ee9b6f4996b0b1.fontdata"
+uid="uid://cdsdtlmt48u4i"
+path="res://.godot/imported/DUNGRG__.TTF-584b9013ea797de3f22bbfa0d3a11fc3.fontdata"
 
 [deps]
 
-source_file="res://fonts/The Lost Dungeon.ttf"
-dest_files=["res://.godot/imported/The Lost Dungeon.ttf-157a2bd486f365d714ee9b6f4996b0b1.fontdata"]
+source_file="res://font/DUNGRG__.TTF"
+dest_files=["res://.godot/imported/DUNGRG__.TTF-584b9013ea797de3f22bbfa0d3a11fc3.fontdata"]
 
 [params]
 

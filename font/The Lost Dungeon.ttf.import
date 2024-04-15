@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b8b7vjenap4da"
-path="res://.godot/imported/Dungeon Depths.ttf-ff198c4c140738b911489872b48b0838.fontdata"
+uid="uid://ikhvoiq42pmf"
+path="res://.godot/imported/The Lost Dungeon.ttf-00428dac680a1bfcf090396c7910189e.fontdata"
 
 [deps]
 
-source_file="res://fonts/Dungeon Depths.ttf"
-dest_files=["res://.godot/imported/Dungeon Depths.ttf-ff198c4c140738b911489872b48b0838.fontdata"]
+source_file="res://font/The Lost Dungeon.ttf"
+dest_files=["res://.godot/imported/The Lost Dungeon.ttf-00428dac680a1bfcf090396c7910189e.fontdata"]
 
 [params]
 
