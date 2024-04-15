@@ -12,8 +12,6 @@ class_name Attack
 		if $attack_speed:
 			$Attack_speed.wait_time = attack_speed 
 
-
-
 var can_attack : bool = true
 
 
@@ -27,6 +25,7 @@ func attack():
 		$Attack_speed.start()
 		can_attack = false
 	#fai partile l'animazione d'attacco 
+
 func _on_attack_speed_timeout():
 	can_attack = true
 
