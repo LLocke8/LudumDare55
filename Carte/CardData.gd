@@ -11,7 +11,7 @@ const DATA = {
 		['',1, 13, "res://Carte/Sprite Carte/Carta Scudo.png", "The best out of the 3 stupid Skeletons, the elitè among the weaklings... kidding, he uses a shield, he is just scared of everything.","res://Carte/Carta.tscn","res://Entity/Unit/Shield Skeleton/Shield Skeleton.tscn"],
 	'Phantom':
 		['',3, 4, "res://Carte/Sprite Carte/Carta Phantom.png",'He has fangs because he thought it was "edgy", still gets one shotted by almost everything.',"res://Carte/carta.tscn",],
-	'Bullone':
+	'Living Armor'
 		['',7, 50, "res://Carte/Sprite Carte/Carta Bullone.png",'The real deal, the Boss among the army of useless undead, the best tank, the best frontline and the best unti among them, except he takes double the emotional damage because his head is small.
 Do not make fun of his name, he is sensitive about the topic...',"res://Carte/carta.tscn",],
 	'Sorcerer':

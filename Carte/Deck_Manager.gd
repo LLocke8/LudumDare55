@@ -22,7 +22,6 @@ var Anime : int = 5 :
 			#Anime = Maxanime
 		nodoui.Mana.text = "Mana \n" + str(Anime)
 
-
 var anime_turno : int = 5 
 
 func _ready():
@@ -65,6 +64,7 @@ func on_next_phase(phase):
 	for card in nodoui.deck.get_children():
 		card.is_locked = phase 
 	if !phase:
+		draw(3)
 		Anime += anime_turno
 
 func _on_area_posizionamento_input_event(viewport, event, shape_idx):
