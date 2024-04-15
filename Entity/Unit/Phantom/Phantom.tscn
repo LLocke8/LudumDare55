@@ -29,9 +29,10 @@ radius = 40.0
 script = ExtResource("2_rrha6")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
-speed = 60
+speed = 120
 max_hp = 4
 hp = 4
+damage_to_opponent = 4
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_o5pce")

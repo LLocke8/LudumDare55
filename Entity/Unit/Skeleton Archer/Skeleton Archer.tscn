@@ -28,14 +28,14 @@ size = Vector2(200, 60)
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbk2o"]
 radius = 65.0
 
-[node name="Skeleton Archer" node_paths=PackedStringArray("aggro_node", "attack_node", "melee_attack_node") instance=ExtResource("1_p7uyb")]
+[node name="Skeleton Archer" node_paths=PackedStringArray("aggro_node", "attack_node") instance=ExtResource("1_p7uyb")]
 script = ExtResource("2_swggk")
 aggro_node = NodePath("Aggro")
 attack_node = NodePath("Attack")
-melee_attack_node = NodePath("Attack2")
-speed = 36
+speed = 72
 max_hp = 3
 hp = 3
+damage_to_opponent = 3
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_as7wa")
@@ -51,8 +51,7 @@ damage = 3
 attack_speed = 1.0
 shape = SubResource("RectangleShape2D_y2hbc")
 
-[node name="Attack2" parent="." index="4" node_paths=PackedStringArray("primary") instance=ExtResource("3_hwobs")]
+[node name="Attack2" parent="." index="4" instance=ExtResource("3_hwobs")]
 damage = 1
 attack_speed = 1.0
-primary = NodePath("../Attack")
 shape = SubResource("CircleShape2D_qbk2o")
