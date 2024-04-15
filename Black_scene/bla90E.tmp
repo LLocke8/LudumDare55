@@ -32,7 +32,7 @@ offset_right = 724.12
 offset_bottom = 311.48
 text = "PROVA 2 "
 
-[node name="change" type="Button" parent="."]
+[node name="change_button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 493.0
 offset_top = 356.0
