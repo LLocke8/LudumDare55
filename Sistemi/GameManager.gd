@@ -70,7 +70,6 @@ var current_turn : int = 0 :
 
 func _ready():
 	ES.Spawn_wave(current_turn)
-	saveload.save_game(current_level)
 
 func prossimo_turno():
 	current_turn+=1
@@ -105,13 +104,12 @@ func damagearea_entered(body):
 		body.queue_free()
 
 func victory():
-	match current_level:
-		1:
-			get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello2.tscn"))
-		2:
-			get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello3.tscn"))
-		3:
-			get_tree().change_scene_to_packed(load("res://Scenes/Victory/victory.tscn"))
+	if owner.get_node("Lev1") != null:
+		get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello2.tscn"))
+	elif owner.get_node("Lev2") != null:
+		get_tree().change_scene_to_packed(load("res://Map/Livelli/Livello3.tscn"))
+	else:
+		get_tree().change_scene_to_packed(load("res://Scenes/Victory/victory.tscn"))
 
 func defeat():
 	get_tree().change_scene_to_packed(load("res://Scenes/Game_Over/Game_over.tscn"))
