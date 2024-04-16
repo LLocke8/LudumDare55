@@ -66,6 +66,7 @@ var current_turn : int = 0 :
 			current_turn = nturn
 			if current_turn >= ES.Waves.size():
 				victory()
+			UI.turn_counter.text = "Turn \n" + str(current_turn+1)
 
 func _ready():
 	ES.Spawn_wave(current_turn)

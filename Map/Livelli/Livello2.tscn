@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cod34d8muen7y" path="res://Map/Main_map.tscn" id="1_dsirt"]
 [ext_resource type="AudioStream" uid="uid://bnok77j3e4bsc" path="res://music/upbeat_ost.mp3" id="2_ft2e7"]
 
-[node name="MainMap" instance=ExtResource("1_dsirt")]
+[node name="MainMap2" instance=ExtResource("1_dsirt")]
 
 [node name="Spawner" parent="." index="0"]
 position = Vector2(12, 6)
