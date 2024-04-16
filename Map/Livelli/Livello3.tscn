@@ -23,6 +23,9 @@ Waves = [{
 "Tomb": [Vector2(1100, 90), Vector2(1100, 520)]
 }]
 
+[node name="GameManager" parent="." index="1"]
+current_level = 3
+
 [node name="DeckManager" parent="." index="2"]
 STARTING_DECK = ["Tank Skeleton", "Skeleton Archer", "Tomb", "Phantom", "Soul Turret", "Tank Skeleton", "Tank Skeleton", "Skeleton Archer", "Skeleton Archer", "Tomb", "Phantom", "Phantom", "Soul Turret", "Sorcerer", "Skeleton swordman", "Skeleton swordman", "Skeleton swordman", "Wooden Wall", "Wooden Wall", "Living Armor", "Wooden Wall", "Soul Turret"]
 
